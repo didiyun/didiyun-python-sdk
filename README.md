@@ -1,13 +1,13 @@
 # 快速开始 Getting Started
 
-滴滴云Python开发者工具套件（didiyun-python-sdk）可让您在python语言环境下不用复杂编程即可访问滴滴云下计算产品线产品及账单类操作。本节介绍如何获取滴滴云python sdk并开始调用。
+滴滴云Python开发者工具套件（didiyun-python-sdk）可让您在python语言环境下不用复杂编程即可访问滴滴云下计算产品线产品及账单类操作。本节介绍如何获取滴滴云python sdk并开始调用。
 
 ## 环境准备
 * 滴滴云python sdk基于python语言，支持python2与python3。本文默认您已安装python的基本语言环境，将不再进行赘述。
 * 滴滴云python sdk使用OAuth 2.0协议Bearer Token(RFC 6750)形式进行API访问授权。为使用滴滴云Python SDK，您需要为账号生成一个滴滴云API Token。您可在滴滴云控制台中的API Token管理页面上创建您的Token。
 
 ## 安装滴滴云python sdk
-执行以下命令，安装滴滴云python sdk。滴滴云python sdk依赖google grpc及protobuf3.x等package，已为您将相关依赖集成在requirement.txt文件中。
+执行以下命令，安装滴滴云python sdk。滴滴云python sdk依赖google grpc及protobuf3.x等package，已为您将相关依赖集成在requirement.txt文件中。
 
 ```
 git clone https://github.com/didiyun/didiyun-python-sdk
@@ -165,7 +165,7 @@ ebs.size = 30
 ```
 
 # 错误处理
-调用滴滴云python sdk中的所有Client的相应方法返回的Response均包含一个通用的滴滴云error字段和一个data字段，如下所示。
+调用滴滴云python sdk中的所有Client的相应方法返回的Response均包含一个通用的滴滴云error字段和一个data字段，如下所示。
 
 ```
 _descriptor.FieldDescriptor(
@@ -219,8 +219,8 @@ cd didiyun-python-sdk/tests/compute/v1
 python dc2_test.py
 ```
 
-在调用失败时，您可以通过错误码（Errno）与错误信息（Errmsg）得到调用错误的原因，若无法解决，可联系[滴滴云技术支持](#https://help.didiyun.com/hc/request/new/)。
-常见错误码如下：
+在调用失败时，您可以通过错误码（Errno）与错误信息（Errmsg）得到调用错误的原因，若无法解决，可联系[滴滴云技术支持](#https://help.didiyun.com/hc/request/new/)。
+常见错误码如下：
 
 | 错误码  | 错误信息 |  描述  |
 |-----|-----|-----|
