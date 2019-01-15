@@ -22,7 +22,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='didi.cloud.compute.v1',
   syntax='proto3',
   serialized_options=_b('\n\026com.didiyun.compute.v1P\001Z4github.com/didiyun/didiyun-go-sdk/compute/v1;compute\370\001\001\252\002\027Didi.Dicloud.Compute.V1\312\002\027Didi\\Dicloud\\Compute\\V1'),
-  serialized_pb=_b('\n\x15\x63ompute/v1/snap.proto\x12\x15\x64idi.cloud.compute.v1\x1a\x12\x62\x61se/v1/base.proto\x1a\x17\x63ompute/v1/common.proto\"\xb2\x01\n\x13ListSnapshotRequest\x12*\n\x06header\x18\x01 \x01(\x0b\x32\x1a.didi.cloud.base.v1.Header\x12\r\n\x05start\x18\x02 \x01(\x05\x12\r\n\x05limit\x18\x03 \x01(\x05\x12\x10\n\x08simplify\x18\x04 \x01(\x08\x12?\n\tcondition\x18\x05 \x01(\x0b\x32,.didi.cloud.compute.v1.ListSnapshotCondition\":\n\x15ListSnapshotCondition\x12\x0f\n\x07\x65\x62sUuid\x18\x01 \x01(\t\x12\x10\n\x08snapName\x18\x02 \x01(\t\"o\n\x14ListSnapshotResponse\x12(\n\x05\x65rror\x18\x01 \x01(\x0b\x32\x19.didi.cloud.base.v1.Error\x12-\n\x04\x64\x61ta\x18\x02 \x03(\x0b\x32\x1f.didi.cloud.compute.v1.SnapInfo\"k\n\x1aGetSnapshotTotalCntRequest\x12*\n\x06header\x18\x01 \x01(\x0b\x32\x1a.didi.cloud.base.v1.Header\x12\x0f\n\x07\x65\x62sUuid\x18\x02 \x01(\t\x12\x10\n\x08snapName\x18\x03 \x01(\t\"z\n\x1bGetSnapshotTotalCntResponse\x12(\n\x05\x65rror\x18\x01 \x01(\x0b\x32\x19.didi.cloud.base.v1.Error\x12\x31\n\x04\x64\x61ta\x18\x02 \x03(\x0b\x32#.didi.cloud.compute.v1.TotalCntInfo\"w\n\x15\x43reateSnapshotRequest\x12*\n\x06header\x18\x01 \x01(\x0b\x32\x1a.didi.cloud.base.v1.Header\x12\x0f\n\x07\x64\x63\x32Uuid\x18\x02 \x01(\t\x12\x0f\n\x07\x65\x62sUuid\x18\x03 \x01(\t\x12\x10\n\x08snapName\x18\x04 \x01(\t\"m\n\x16\x43reateSnapshotResponse\x12(\n\x05\x65rror\x18\x01 \x01(\x0b\x32\x19.didi.cloud.base.v1.Error\x12)\n\x04\x64\x61ta\x18\x02 \x03(\x0b\x32\x1b.didi.cloud.base.v1.JobInfo\"\xa0\x01\n\x15\x44\x65leteSnapshotRequest\x12*\n\x06header\x18\x01 \x01(\x0b\x32\x1a.didi.cloud.base.v1.Header\x12@\n\x04snap\x18\x02 \x03(\x0b\x32\x32.didi.cloud.compute.v1.DeleteSnapshotRequest.Input\x1a\x19\n\x05Input\x12\x10\n\x08snapUuid\x18\x01 \x01(\t\"m\n\x16\x44\x65leteSnapshotResponse\x12(\n\x05\x65rror\x18\x01 \x01(\x0b\x32\x19.didi.cloud.base.v1.Error\x12)\n\x04\x64\x61ta\x18\x02 \x03(\x0b\x32\x1b.didi.cloud.base.v1.JobInfo\"\xc3\x01\n\x15RevertSnapshotRequest\x12*\n\x06header\x18\x01 \x01(\x0b\x32\x1a.didi.cloud.base.v1.Header\x12@\n\x04snap\x18\x02 \x03(\x0b\x32\x32.didi.cloud.compute.v1.RevertSnapshotRequest.Input\x12\x0f\n\x07stopDc2\x18\x03 \x01(\x08\x12\x10\n\x08startDc2\x18\x04 \x01(\x08\x1a\x19\n\x05Input\x12\x10\n\x08snapUuid\x18\x01 \x01(\t\"m\n\x16RevertSnapshotResponse\x12(\n\x05\x65rror\x18\x01 \x01(\x0b\x32\x19.didi.cloud.base.v1.Error\x12)\n\x04\x64\x61ta\x18\x02 \x03(\x0b\x32\x1b.didi.cloud.base.v1.JobInfo\"\xd9\x01\n\x19\x43hangeSnapshotNameRequest\x12*\n\x06header\x18\x01 \x01(\x0b\x32\x1a.didi.cloud.base.v1.Header\x12\x44\n\x04snap\x18\x02 \x03(\x0b\x32\x36.didi.cloud.compute.v1.ChangeSnapshotNameRequest.Input\x12\x0f\n\x07stopDc2\x18\x03 \x01(\x08\x12\x10\n\x08startDc2\x18\x04 \x01(\x08\x1a\'\n\x05Input\x12\x10\n\x08snapUuid\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\"q\n\x1a\x43hangeSnapshotNameResponse\x12(\n\x05\x65rror\x18\x01 \x01(\x0b\x32\x19.didi.cloud.base.v1.Error\x12)\n\x04\x64\x61ta\x18\x02 \x03(\x0b\x32\x1b.didi.cloud.base.v1.JobInfo2\xc1\x05\n\x04Snap\x12i\n\x0cListSnapshot\x12*.didi.cloud.compute.v1.ListSnapshotRequest\x1a+.didi.cloud.compute.v1.ListSnapshotResponse\"\x00\x12~\n\x13GetSnapshotTotalCnt\x12\x31.didi.cloud.compute.v1.GetSnapshotTotalCntRequest\x1a\x32.didi.cloud.compute.v1.GetSnapshotTotalCntResponse\"\x00\x12o\n\x0e\x43reateSnapshot\x12,.didi.cloud.compute.v1.CreateSnapshotRequest\x1a-.didi.cloud.compute.v1.CreateSnapshotResponse\"\x00\x12o\n\x0e\x44\x65leteSnapshot\x12,.didi.cloud.compute.v1.DeleteSnapshotRequest\x1a-.didi.cloud.compute.v1.DeleteSnapshotResponse\"\x00\x12o\n\x0eRevertSnapshot\x12,.didi.cloud.compute.v1.RevertSnapshotRequest\x1a-.didi.cloud.compute.v1.RevertSnapshotResponse\"\x00\x12{\n\x12\x43hangeSnapshotName\x12\x30.didi.cloud.compute.v1.ChangeSnapshotNameRequest\x1a\x31.didi.cloud.compute.v1.ChangeSnapshotNameResponse\"\x00\x42\x87\x01\n\x16\x63om.didiyun.compute.v1P\x01Z4github.com/didiyun/didiyun-go-sdk/compute/v1;compute\xf8\x01\x01\xaa\x02\x17\x44idi.Dicloud.Compute.V1\xca\x02\x17\x44idi\\Dicloud\\Compute\\V1b\x06proto3')
+  serialized_pb=_b('\n\x15\x63ompute/v1/snap.proto\x12\x15\x64idi.cloud.compute.v1\x1a\x12\x62\x61se/v1/base.proto\x1a\x17\x63ompute/v1/common.proto\"\xb2\x01\n\x13ListSnapshotRequest\x12*\n\x06header\x18\x01 \x01(\x0b\x32\x1a.didi.cloud.base.v1.Header\x12\r\n\x05start\x18\x02 \x01(\x05\x12\r\n\x05limit\x18\x03 \x01(\x05\x12\x10\n\x08simplify\x18\x04 \x01(\x08\x12?\n\tcondition\x18\x05 \x01(\x0b\x32,.didi.cloud.compute.v1.ListSnapshotCondition\"K\n\x15ListSnapshotCondition\x12\x0f\n\x07\x65\x62sUuid\x18\x01 \x01(\t\x12\x10\n\x08snapName\x18\x02 \x01(\t\x12\x0f\n\x07\x64\x63\x32Uuid\x18\x03 \x01(\t\"o\n\x14ListSnapshotResponse\x12(\n\x05\x65rror\x18\x01 \x01(\x0b\x32\x19.didi.cloud.base.v1.Error\x12-\n\x04\x64\x61ta\x18\x02 \x03(\x0b\x32\x1f.didi.cloud.compute.v1.SnapInfo\"|\n\x1aGetSnapshotTotalCntRequest\x12*\n\x06header\x18\x01 \x01(\x0b\x32\x1a.didi.cloud.base.v1.Header\x12\x0f\n\x07\x65\x62sUuid\x18\x02 \x01(\t\x12\x10\n\x08snapName\x18\x03 \x01(\t\x12\x0f\n\x07\x64\x63\x32Uuid\x18\x04 \x01(\t\"z\n\x1bGetSnapshotTotalCntResponse\x12(\n\x05\x65rror\x18\x01 \x01(\x0b\x32\x19.didi.cloud.base.v1.Error\x12\x31\n\x04\x64\x61ta\x18\x02 \x03(\x0b\x32#.didi.cloud.compute.v1.TotalCntInfo\"w\n\x15\x43reateSnapshotRequest\x12*\n\x06header\x18\x01 \x01(\x0b\x32\x1a.didi.cloud.base.v1.Header\x12\x0f\n\x07\x64\x63\x32Uuid\x18\x02 \x01(\t\x12\x0f\n\x07\x65\x62sUuid\x18\x03 \x01(\t\x12\x10\n\x08snapName\x18\x04 \x01(\t\"m\n\x16\x43reateSnapshotResponse\x12(\n\x05\x65rror\x18\x01 \x01(\x0b\x32\x19.didi.cloud.base.v1.Error\x12)\n\x04\x64\x61ta\x18\x02 \x03(\x0b\x32\x1b.didi.cloud.base.v1.JobInfo\"\xa0\x01\n\x15\x44\x65leteSnapshotRequest\x12*\n\x06header\x18\x01 \x01(\x0b\x32\x1a.didi.cloud.base.v1.Header\x12@\n\x04snap\x18\x02 \x03(\x0b\x32\x32.didi.cloud.compute.v1.DeleteSnapshotRequest.Input\x1a\x19\n\x05Input\x12\x10\n\x08snapUuid\x18\x01 \x01(\t\"m\n\x16\x44\x65leteSnapshotResponse\x12(\n\x05\x65rror\x18\x01 \x01(\x0b\x32\x19.didi.cloud.base.v1.Error\x12)\n\x04\x64\x61ta\x18\x02 \x03(\x0b\x32\x1b.didi.cloud.base.v1.JobInfo\"\xc3\x01\n\x15RevertSnapshotRequest\x12*\n\x06header\x18\x01 \x01(\x0b\x32\x1a.didi.cloud.base.v1.Header\x12@\n\x04snap\x18\x02 \x03(\x0b\x32\x32.didi.cloud.compute.v1.RevertSnapshotRequest.Input\x12\x0f\n\x07stopDc2\x18\x03 \x01(\x08\x12\x10\n\x08startDc2\x18\x04 \x01(\x08\x1a\x19\n\x05Input\x12\x10\n\x08snapUuid\x18\x01 \x01(\t\"m\n\x16RevertSnapshotResponse\x12(\n\x05\x65rror\x18\x01 \x01(\x0b\x32\x19.didi.cloud.base.v1.Error\x12)\n\x04\x64\x61ta\x18\x02 \x03(\x0b\x32\x1b.didi.cloud.base.v1.JobInfo\"\xd9\x01\n\x19\x43hangeSnapshotNameRequest\x12*\n\x06header\x18\x01 \x01(\x0b\x32\x1a.didi.cloud.base.v1.Header\x12\x44\n\x04snap\x18\x02 \x03(\x0b\x32\x36.didi.cloud.compute.v1.ChangeSnapshotNameRequest.Input\x12\x0f\n\x07stopDc2\x18\x03 \x01(\x08\x12\x10\n\x08startDc2\x18\x04 \x01(\x08\x1a\'\n\x05Input\x12\x10\n\x08snapUuid\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\"q\n\x1a\x43hangeSnapshotNameResponse\x12(\n\x05\x65rror\x18\x01 \x01(\x0b\x32\x19.didi.cloud.base.v1.Error\x12)\n\x04\x64\x61ta\x18\x02 \x03(\x0b\x32\x1b.didi.cloud.base.v1.JobInfo2\xc1\x05\n\x04Snap\x12i\n\x0cListSnapshot\x12*.didi.cloud.compute.v1.ListSnapshotRequest\x1a+.didi.cloud.compute.v1.ListSnapshotResponse\"\x00\x12~\n\x13GetSnapshotTotalCnt\x12\x31.didi.cloud.compute.v1.GetSnapshotTotalCntRequest\x1a\x32.didi.cloud.compute.v1.GetSnapshotTotalCntResponse\"\x00\x12o\n\x0e\x43reateSnapshot\x12,.didi.cloud.compute.v1.CreateSnapshotRequest\x1a-.didi.cloud.compute.v1.CreateSnapshotResponse\"\x00\x12o\n\x0e\x44\x65leteSnapshot\x12,.didi.cloud.compute.v1.DeleteSnapshotRequest\x1a-.didi.cloud.compute.v1.DeleteSnapshotResponse\"\x00\x12o\n\x0eRevertSnapshot\x12,.didi.cloud.compute.v1.RevertSnapshotRequest\x1a-.didi.cloud.compute.v1.RevertSnapshotResponse\"\x00\x12{\n\x12\x43hangeSnapshotName\x12\x30.didi.cloud.compute.v1.ChangeSnapshotNameRequest\x1a\x31.didi.cloud.compute.v1.ChangeSnapshotNameResponse\"\x00\x42\x87\x01\n\x16\x63om.didiyun.compute.v1P\x01Z4github.com/didiyun/didiyun-go-sdk/compute/v1;compute\xf8\x01\x01\xaa\x02\x17\x44idi.Dicloud.Compute.V1\xca\x02\x17\x44idi\\Dicloud\\Compute\\V1b\x06proto3')
   ,
   dependencies=[base_dot_v1_dot_base__pb2.DESCRIPTOR,compute_dot_v1_dot_common__pb2.DESCRIPTOR,])
 
@@ -109,6 +109,13 @@ _LISTSNAPSHOTCONDITION = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='dc2Uuid', full_name='didi.cloud.compute.v1.ListSnapshotCondition.dc2Uuid', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -122,7 +129,7 @@ _LISTSNAPSHOTCONDITION = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=274,
-  serialized_end=332,
+  serialized_end=349,
 )
 
 
@@ -159,8 +166,8 @@ _LISTSNAPSHOTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=334,
-  serialized_end=445,
+  serialized_start=351,
+  serialized_end=462,
 )
 
 
@@ -192,6 +199,13 @@ _GETSNAPSHOTTOTALCNTREQUEST = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='dc2Uuid', full_name='didi.cloud.compute.v1.GetSnapshotTotalCntRequest.dc2Uuid', index=3,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -204,8 +218,8 @@ _GETSNAPSHOTTOTALCNTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=447,
-  serialized_end=554,
+  serialized_start=464,
+  serialized_end=588,
 )
 
 
@@ -242,8 +256,8 @@ _GETSNAPSHOTTOTALCNTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=556,
-  serialized_end=678,
+  serialized_start=590,
+  serialized_end=712,
 )
 
 
@@ -294,8 +308,8 @@ _CREATESNAPSHOTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=680,
-  serialized_end=799,
+  serialized_start=714,
+  serialized_end=833,
 )
 
 
@@ -332,8 +346,8 @@ _CREATESNAPSHOTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=801,
-  serialized_end=910,
+  serialized_start=835,
+  serialized_end=944,
 )
 
 
@@ -363,8 +377,8 @@ _DELETESNAPSHOTREQUEST_INPUT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1048,
-  serialized_end=1073,
+  serialized_start=1082,
+  serialized_end=1107,
 )
 
 _DELETESNAPSHOTREQUEST = _descriptor.Descriptor(
@@ -400,8 +414,8 @@ _DELETESNAPSHOTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=913,
-  serialized_end=1073,
+  serialized_start=947,
+  serialized_end=1107,
 )
 
 
@@ -438,8 +452,8 @@ _DELETESNAPSHOTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1075,
-  serialized_end=1184,
+  serialized_start=1109,
+  serialized_end=1218,
 )
 
 
@@ -469,8 +483,8 @@ _REVERTSNAPSHOTREQUEST_INPUT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1048,
-  serialized_end=1073,
+  serialized_start=1082,
+  serialized_end=1107,
 )
 
 _REVERTSNAPSHOTREQUEST = _descriptor.Descriptor(
@@ -520,8 +534,8 @@ _REVERTSNAPSHOTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1187,
-  serialized_end=1382,
+  serialized_start=1221,
+  serialized_end=1416,
 )
 
 
@@ -558,8 +572,8 @@ _REVERTSNAPSHOTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1384,
-  serialized_end=1493,
+  serialized_start=1418,
+  serialized_end=1527,
 )
 
 
@@ -596,8 +610,8 @@ _CHANGESNAPSHOTNAMEREQUEST_INPUT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1674,
-  serialized_end=1713,
+  serialized_start=1708,
+  serialized_end=1747,
 )
 
 _CHANGESNAPSHOTNAMEREQUEST = _descriptor.Descriptor(
@@ -647,8 +661,8 @@ _CHANGESNAPSHOTNAMEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1496,
-  serialized_end=1713,
+  serialized_start=1530,
+  serialized_end=1747,
 )
 
 
@@ -685,8 +699,8 @@ _CHANGESNAPSHOTNAMERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1715,
-  serialized_end=1828,
+  serialized_start=1749,
+  serialized_end=1862,
 )
 
 _LISTSNAPSHOTREQUEST.fields_by_name['header'].message_type = base_dot_v1_dot_base__pb2._HEADER
@@ -853,8 +867,8 @@ _SNAP = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=1831,
-  serialized_end=2536,
+  serialized_start=1865,
+  serialized_end=2570,
   methods=[
   _descriptor.MethodDescriptor(
     name='ListSnapshot',

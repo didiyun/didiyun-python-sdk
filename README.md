@@ -1,13 +1,13 @@
 # 快速开始 Getting Started
 
-滴滴云Python开发者工具套件（didiyun-python-sdk）可让您在python语言环境下不用复杂编程即可访问滴滴云下计算产品线产品及账单类操作。本节介绍如何获取滴滴云python sdk并开始调用。
+滴滴云Python开发者工具套件（didiyun-python-sdk）可让您在python语言环境下不用复杂编程即可访问滴滴云下计算产品线产品及账单类操作。本节介绍如何获取滴滴云python sdk并开始调用。
 
 ## 环境准备
-* 滴滴云python sdk基于python语言，支持python2与python3。本文默认您已安装python的基本语言环境，将不再进行赘述。
-* 滴滴云python sdk使用OAuth 2.0协议Bearer Token(RFC 6750)形式进行API访问授权。为使用滴滴云Python SDK，您需要为账号生成一个滴滴云API Token。您可在滴滴云控制台中的API Token管理页面上创建您的Token。
+* 滴滴云python sdk基于python语言，支持python2与python3。本文默认您已安装python的基本语言环境，将不再进行赘述。
+* 滴滴云python sdk使用OAuth 2.0协议Bearer Token(RFC 6750)形式进行API访问授权。为使用滴滴云Python SDK，您需要为账号生成一个滴滴云API Token。您可在滴滴云控制台中的API Token管理页面上创建您的Token。
 
 ## 安装滴滴云python sdk
-执行以下命令，安装滴滴云python sdk。滴滴云python sdk依赖google grpc及protobuf3.x等package，已为您将相关依赖集成在requirement.txt文件中。
+执行以下命令，安装滴滴云python sdk。滴滴云python sdk依赖google grpc及protobuf3.x等package，已为您将相关依赖集成在requirement.txt文件中。
 
 ```
 git clone https://github.com/didiyun/didiyun-python-sdk
@@ -15,9 +15,9 @@ python -m pip install -r ./didiyun-python-sdk/requirements.txt
 ```
 
 ## 使用滴滴云python sdk
-以下代码示例展示了调用滴滴云python sdk的三个主要步骤：
+以下代码示例展示了调用滴滴云python sdk的三个主要步骤：
 
-1. 使用oauth2 Token验证方式，调用grpc.secure_channel获取一个channel。
+1. 使用oauth2 Token验证方式，调用grpc.secure_channel获取一个channel。
 2. 使用此channel初始化需要访问的产品线对应的Stub。
 3. 组装请求体，发起请求并处理应答或错误。
 
@@ -185,8 +185,8 @@ _descriptor.FieldDescriptor(
 ```
 
 滴滴云python sdk在调用出错时，会返回相应的的错误信息。在调用结束时，建议您遵循以下步骤对调用响应进行处理：
-1. 使用try对异常进行处理，确定sdk端的调用是否产生错误。
-2. 对返回响应中的Error中的Errno进行判断，如果不为0，表示服务端产生了错误。
+1. 使用try对异常进行处理，确定sdk端的调用是否产生错误。
+2. 对返回响应中的Error中的Errno进行判断，如果不为0，表示服务端产生了错误。
 3. 若没有错误，处理返回响应中的Data部分。
 
 ```
@@ -201,12 +201,12 @@ except Exception as e:
 # 异步调用
 滴滴云python sdk中，所有对于资源的操作类请求都是异步实现的。在调用例如DC2开机等一系列异步操作类请求时，您可在返回值中获取到任务信息。
 
-您需要调用JobResult方法，通过jobUuid来轮询获取此任务的进度。
-其中，Done字段表示服务端是否还在处理此任务，Success字段表示处理结果是否成功。
-建议您遵循以下步骤对异步任务进行处理：
-1. 先判断调用响应是否有错误。
-2. 对返回响应中的Done字段进行判断，若为false，则等待片刻重新轮询，若为true，表示任务完成，继续第3步。
-3. 判断success字段，若为true，表示任务操作成功，若为false，表示任务失败，此时可读取result字段查看错误信息。
+您需要调用JobResult方法，通过jobUuid来轮询获取此任务的进度。
+其中，Done字段表示服务端是否还在处理此任务，Success字段表示处理结果是否成功。
+建议您遵循以下步骤对异步任务进行处理：
+1. 先判断调用响应是否有错误。
+2. 对返回响应中的Done字段进行判断，若为false，则等待片刻重新轮询，若为true，表示任务完成，继续第3步。
+3. 判断success字段，若为true，表示任务操作成功，若为false，表示任务失败，此时可读取result字段查看错误信息。
 
 # 调用与错误示例
 对于滴滴云python sdk提供的所有接口，文件内均有调用示例，您可运行每个接口的调用示例作为编写代码的参考。（部分示例的正确运行需要您手动指定正确参数）。
