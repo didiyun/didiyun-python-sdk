@@ -22,7 +22,7 @@ class TestSg(unittest.TestCase):
         print(createSgResp)
         self.assertEqual(createSgResp.error.errno, 0)
         print("createSg, jobUuid:", createSgResp.data[0].jobUuid)
-        success = cli.wait_for_job_result(createSgResp.data[0].jobUuid)  # 轮询等待结果
+        success = cli.wait_for_job_result('gz', createSgResp.data[0].jobUuid)  # 轮询等待结果
         print("createSg, success:", success)
         self.assertTrue(success)
 
@@ -57,7 +57,7 @@ class TestSg(unittest.TestCase):
         print(createSgRuleResp)
         self.assertEqual(createSgRuleResp.error.errno, 0)
         print("createSgRule, jobUuid:", createSgRuleResp.data[0].jobUuid)
-        success = cli.wait_for_job_result(createSgRuleResp.data[0].jobUuid)  # 轮询等待结果
+        success = cli.wait_for_job_result('gz', createSgRuleResp.data[0].jobUuid)  # 轮询等待结果
         print("createSgRule, success:", success)
         self.assertTrue(success)
 
@@ -107,7 +107,7 @@ class TestSg(unittest.TestCase):
         print(attachDc2ToSgResp)
         self.assertEqual(attachDc2ToSgResp.error.errno, 0)
         print("attachDc2ToSg, jobUuid:", attachDc2ToSgResp.data[0].jobUuid)
-        success = cli.wait_for_job_result(attachDc2ToSgResp.data[0].jobUuid)  # 轮询等待结果
+        success = cli.wait_for_job_result('gz', attachDc2ToSgResp.data[0].jobUuid)  # 轮询等待结果
         print("attachDc2ToSg, success:", success)
         self.assertTrue(success)
 
@@ -130,7 +130,7 @@ class TestSg(unittest.TestCase):
         print(detachDc2FromSgResp)
         self.assertEqual(detachDc2FromSgResp.error.errno, 0)
         print("detachDc2FromSg, jobUuid:", detachDc2FromSgResp.data[0].jobUuid)
-        success = cli.wait_for_job_result(detachDc2FromSgResp.data[0].jobUuid)  # 轮询等待结果
+        success = cli.wait_for_job_result('gz', detachDc2FromSgResp.data[0].jobUuid)  # 轮询等待结果
         print("detachDc2FromSg, success:", success)
         self.assertTrue(success)
 
@@ -153,7 +153,7 @@ class TestSg(unittest.TestCase):
         print(deleteSgRuleResp)
         self.assertEqual(deleteSgRuleResp.error.errno, 0)
         print("deleteSgRule, jobUuid:", deleteSgRuleResp.data[0].jobUuid)
-        success = cli.wait_for_job_result(deleteSgRuleResp.data[0].jobUuid)  # 轮询等待结果
+        success = cli.wait_for_job_result('gz', deleteSgRuleResp.data[0].jobUuid)  # 轮询等待结果
         print("deleteSgRule, success:", success)
         self.assertTrue(success)
 
@@ -170,7 +170,7 @@ class TestSg(unittest.TestCase):
         print(deleteSgResp)
         self.assertEqual(deleteSgResp.error.errno, 0)
         print("deleteSg, jobUuid:", deleteSgResp.data[0].jobUuid)
-        success = cli.wait_for_job_result(deleteSgResp.data[0].jobUuid)  # 轮询等待结果
+        success = cli.wait_for_job_result('gz', deleteSgResp.data[0].jobUuid)  # 轮询等待结果
         print("deleteSg, success:", success)
         self.assertTrue(success)
 

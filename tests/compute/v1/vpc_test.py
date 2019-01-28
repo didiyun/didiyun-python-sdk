@@ -16,7 +16,7 @@ class TestVpc(unittest.TestCase):
                                                            name='testCreateVpc', cidr='172.16.0.0/12'))
         self.assertEqual(createVpcResp.error.errno, 0)
         print("createVpc, jobUuid:", createVpcResp.data[0].jobUuid)
-        success = cli.wait_for_job_result(createVpcResp.data[0].jobUuid)  # 轮询等待结果
+        success = cli.wait_for_job_result('gz', createVpcResp.data[0].jobUuid)  # 轮询等待结果
         print("createVpc, success:", success)
         self.assertTrue(success)
 
@@ -38,7 +38,7 @@ class TestVpc(unittest.TestCase):
         createSubnetResp = cli.vpcStub.CreateSubnet(createSubnetReq)
         self.assertEqual(createSubnetResp.error.errno, 0)
         print("createSubnet, jobUuid:", createSubnetResp.data[0].jobUuid)
-        success = cli.wait_for_job_result(createSubnetResp.data[0].jobUuid)  # 轮询等待结果
+        success = cli.wait_for_job_result('gz', createSubnetResp.data[0].jobUuid)  # 轮询等待结果
         print("createSubnet, success:", success)
         self.assertTrue(success)
 
@@ -99,7 +99,7 @@ class TestVpc(unittest.TestCase):
         print(changeVpcNameResp)
         self.assertEqual(changeVpcNameResp.error.errno, 0)
         print("changeVpcName, jobUuid:", changeVpcNameResp.data[0].jobUuid)
-        success = cli.wait_for_job_result(changeVpcNameResp.data[0].jobUuid)  # 轮询等待结果
+        success = cli.wait_for_job_result('gz', changeVpcNameResp.data[0].jobUuid)  # 轮询等待结果
         print("changeVpcName, success:", success)
         self.assertTrue(success)
 
@@ -127,7 +127,7 @@ class TestVpc(unittest.TestCase):
         print(changeSubnetNameResp)
         self.assertEqual(changeSubnetNameResp.error.errno, 0)
         print("changeSubnetName, jobUuid:", changeSubnetNameResp.data[0].jobUuid)
-        success = cli.wait_for_job_result(changeSubnetNameResp.data[0].jobUuid)  # 轮询等待结果
+        success = cli.wait_for_job_result('gz', changeSubnetNameResp.data[0].jobUuid)  # 轮询等待结果
         print("changeSubnetName, success:", success)
         self.assertTrue(success)
 
@@ -174,7 +174,7 @@ class TestVpc(unittest.TestCase):
         print(deleteSubnetResp)
         self.assertEqual(deleteSubnetResp.error.errno, 0)
         print("deleteSubnet, jobUuid:", deleteSubnetResp.data[0].jobUuid)
-        success = cli.wait_for_job_result(deleteSubnetResp.data[0].jobUuid)  # 轮询等待结果
+        success = cli.wait_for_job_result('gz', deleteSubnetResp.data[0].jobUuid)  # 轮询等待结果
         print("deleteSubnet, success:", success)
         self.assertTrue(success)
 
@@ -195,7 +195,7 @@ class TestVpc(unittest.TestCase):
         print(deleteVpcResp)
         self.assertEqual(deleteVpcResp.error.errno, 0)
         print("deleteVpc, jobUuid:", deleteVpcResp.data[0].jobUuid)
-        success = cli.wait_for_job_result(deleteVpcResp.data[0].jobUuid)  # 轮询等待结果
+        success = cli.wait_for_job_result('gz', deleteVpcResp.data[0].jobUuid)  # 轮询等待结果
         print("deleteVpc, success:", success)
         self.assertTrue(success)
 

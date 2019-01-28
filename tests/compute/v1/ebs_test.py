@@ -17,7 +17,7 @@ class TestEbs(unittest.TestCase):
         print(createEbsResp)
         self.assertEqual(createEbsResp.error.errno, 0)
         print("createEbs, jobUuid:", createEbsResp.data[0].jobUuid)
-        success = cli.wait_for_job_result(createEbsResp.data[0].jobUuid)  # 轮询等待结果
+        success = cli.wait_for_job_result('gz', createEbsResp.data[0].jobUuid)  # 轮询等待结果
         print("createEbs, success:", success)
         self.assertTrue(success)
 
@@ -66,7 +66,7 @@ class TestEbs(unittest.TestCase):
         print(attachEbsToDc2Resp)
         self.assertEqual(attachEbsToDc2Resp.error.errno, 0)
         print("attachEbsToDc2, jobUuid:", attachEbsToDc2Resp.data[0].jobUuid)
-        success = cli.wait_for_job_result(attachEbsToDc2Resp.data[0].jobUuid)  # 轮询等待结果
+        success = cli.wait_for_job_result('gz', attachEbsToDc2Resp.data[0].jobUuid)  # 轮询等待结果
         print("attachEbsToDc2, success:", success)
         self.assertTrue(success)
 
@@ -84,7 +84,7 @@ class TestEbs(unittest.TestCase):
         print(detachEbsResp)
         self.assertEqual(detachEbsResp.error.errno, 0)
         print("detachEbsFromDc2, jobUuid:", detachEbsResp.data[0].jobUuid)
-        success = cli.wait_for_job_result(detachEbsResp.data[0].jobUuid)  # 轮询等待结果
+        success = cli.wait_for_job_result('gz', detachEbsResp.data[0].jobUuid)  # 轮询等待结果
         print("detachEbsFromDc2, success:", success)
         self.assertTrue(success)
 
@@ -102,7 +102,7 @@ class TestEbs(unittest.TestCase):
         print(changeEbsSizeResp)
         self.assertEqual(changeEbsSizeResp.error.errno, 0)
         print("changeEbsSize, jobUuid:", changeEbsSizeResp.data[0].jobUuid)
-        success = cli.wait_for_job_result(changeEbsSizeResp.data[0].jobUuid)  # 轮询等待结果
+        success = cli.wait_for_job_result('gz', changeEbsSizeResp.data[0].jobUuid)  # 轮询等待结果
         print("changeEbsSize, success:", success)
         self.assertTrue(success)
 
@@ -120,7 +120,7 @@ class TestEbs(unittest.TestCase):
         print(changeEbsNameResp)
         self.assertEqual(changeEbsNameResp.error.errno, 0)
         print("changeEbsName, jobUuid:", changeEbsNameResp.data[0].jobUuid)
-        success = cli.wait_for_job_result(changeEbsNameResp.data[0].jobUuid)  # 轮询等待结果
+        success = cli.wait_for_job_result('gz', changeEbsNameResp.data[0].jobUuid)  # 轮询等待结果
         print("changeEbsName, success:", success)
         self.assertTrue(success)
 
@@ -137,7 +137,7 @@ class TestEbs(unittest.TestCase):
         print(deleteEbsResp)
         self.assertEqual(deleteEbsResp.error.errno, 0)
         print("deleteEbs, jobUuid:", deleteEbsResp.data[0].jobUuid)
-        success = cli.wait_for_job_result(deleteEbsResp.data[0].jobUuid)  # 轮询等待结果
+        success = cli.wait_for_job_result('gz', deleteEbsResp.data[0].jobUuid)  # 轮询等待结果
         print("deleteEbs, success:", success)
         self.assertTrue(success)
 
