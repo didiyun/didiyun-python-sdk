@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='didi.cloud.bill.v1',
   syntax='proto3',
   serialized_options=_b('\n\023com.didiyun.bill.v1P\001Z.github.com/didiyun/didiyun-go-sdk/bill/v1;bill\370\001\001\252\002\024Didi.Dicloud.Bill.V1\312\002\024Didi\\Dicloud\\Bill\\V1'),
-  serialized_pb=_b('\n\x12\x62ill/v1/bill.proto\x12\x12\x64idi.cloud.bill.v1\x1a\x12\x62\x61se/v1/base.proto\"^\n\x07\x44\x63\x32Spec\x12\x0e\n\x06\x63puNum\x18\x01 \x01(\x05\x12\x0e\n\x06gpuNum\x18\x02 \x01(\x05\x12\x12\n\nmemorySize\x18\x03 \x01(\x03\x12\x10\n\x08\x64iskSize\x18\x04 \x01(\x03\x12\r\n\x05model\x18\x05 \x01(\t\"0\n\x07\x45ipSpec\x12\x11\n\tbandwidth\x18\x01 \x01(\x03\x12\x12\n\nchargeType\x18\x02 \x01(\t\")\n\x07\x45\x62sSpec\x12\x0c\n\x04size\x18\x01 \x01(\x03\x12\x10\n\x08\x64iskType\x18\x02 \x01(\t\"\x98\x01\n\x0cResourceSpec\x12,\n\x07\x64\x63\x32Spec\x18\x01 \x01(\x0b\x32\x1b.didi.cloud.bill.v1.Dc2Spec\x12,\n\x07\x65ipSpec\x18\x02 \x01(\x0b\x32\x1b.didi.cloud.bill.v1.EipSpec\x12,\n\x07\x65\x62sSpec\x18\x03 \x01(\x0b\x32\x1b.didi.cloud.bill.v1.EbsSpec\"\xd1\x01\n\nChargeInfo\x12\x0f\n\x07\x65ndTime\x18\x01 \x01(\x03\x12\x15\n\rcostThisMonth\x18\x02 \x01(\x01\x12\x42\n\nchargeInfo\x18\x03 \x03(\x0b\x32..didi.cloud.bill.v1.ChargeInfo.ChargeInfoEntry\x1aW\n\x0f\x43hargeInfoEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\x33\n\x05value\x18\x02 \x01(\x0b\x32$.didi.cloud.bill.v1.FactorRuleDetail:\x02\x38\x01\"M\n\x10\x46\x61\x63torRuleDetail\x12\x14\n\x0c\x61utoRenewCnt\x18\x04 \x01(\x03\x12\x12\n\nautoSwitch\x18\x05 \x01(\x08\x12\x0f\n\x07payType\x18\x06 \x01(\t\"\x8b\x01\n\tBuyDetail\x12\x12\n\nunitVolume\x18\x01 \x01(\x03\x12\x1a\n\x12volumeUnitDescribe\x18\x02 \x01(\t\x12\r\n\x05range\x18\x03 \x03(\x03\x12\n\n\x02in\x18\x04 \x03(\x03\x12\x11\n\tunitPrice\x18\x05 \x01(\x01\x12\r\n\x05value\x18\x06 \x01(\x03\x12\x11\n\trealPrice\x18\x07 \x01(\x01\";\n\x10\x46\x61\x63torRuleFilter\x12\x0b\n\x03min\x18\x01 \x01(\x03\x12\x0b\n\x03max\x18\x02 \x01(\x03\x12\r\n\x05isTop\x18\x03 \x01(\x08\"|\n\x15\x43ontinueListCondition\x12\x11\n\tstartTime\x18\x01 \x01(\x03\x12\x0f\n\x07\x65ndTime\x18\x02 \x01(\x03\x12\x14\n\x0cresourceType\x18\x03 \x01(\t\x12\x10\n\x08regionId\x18\x04 \x01(\t\x12\x17\n\x0f\x61utoRenewFilter\x18\x05 \x01(\t\"\x9d\x01\n\x13\x43ontinueListRequest\x12*\n\x06header\x18\x01 \x01(\x0b\x32\x1a.didi.cloud.base.v1.Header\x12\r\n\x05start\x18\x02 \x01(\x05\x12\r\n\x05limit\x18\x03 \x01(\x05\x12<\n\tcondition\x18\x05 \x01(\x0b\x32).didi.cloud.bill.v1.ContinueListCondition\"x\n\x12ResourceItemOutput\x12\x14\n\x0cresourceUuid\x18\x01 \x01(\t\x12\x14\n\x0cresourcetype\x18\x02 \x01(\t\x12\x36\n\x0cresourceSpec\x18\x03 \x01(\x0b\x32 .didi.cloud.bill.v1.ResourceSpec\"\x93\x02\n\x10\x43ontinueListItem\x12\x14\n\x0cresourceUuid\x18\x01 \x01(\t\x12\x14\n\x0cresourceType\x18\x02 \x01(\t\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x10\n\x08regionId\x18\x04 \x01(\t\x12\x0f\n\x07\x65ndTime\x18\x05 \x01(\x03\x12\x14\n\x0c\x61utoRenewCnt\x18\x06 \x01(\x05\x12\x12\n\nautoSwitch\x18\x07 \x01(\x08\x12\x36\n\x0cresourceSpec\x18\x08 \x01(\x0b\x32 .didi.cloud.bill.v1.ResourceSpec\x12@\n\x10\x62indingResources\x18\t \x03(\x0b\x32&.didi.cloud.bill.v1.ResourceItemOutput\"\xd0\x01\n\x14\x43ontinueListResponse\x12(\n\x05\x65rror\x18\x01 \x01(\x0b\x32\x19.didi.cloud.base.v1.Error\x12;\n\x04\x64\x61ta\x18\x02 \x01(\x0b\x32-.didi.cloud.bill.v1.ContinueListResponse.Data\x1aQ\n\x04\x44\x61ta\x12:\n\x0c\x63ontinueList\x18\x01 \x03(\x0b\x32$.didi.cloud.bill.v1.ContinueListItem\x12\r\n\x05total\x18\x02 \x01(\x05\"?\n\x11ResourceItemInput\x12\x14\n\x0cresourceUuid\x18\x01 \x01(\t\x12\x14\n\x0cresourceType\x18\x02 \x01(\t\"\x90\x01\n\x16\x43ontinueMonthlyRequest\x12*\n\x06header\x18\x01 \x01(\x0b\x32\x1a.didi.cloud.base.v1.Header\x12\x11\n\tpayPeriod\x18\x02 \x01(\x05\x12\x37\n\x08resource\x18\x03 \x03(\x0b\x32%.didi.cloud.bill.v1.ResourceItemInput\"C\n\x17\x43ontinueMonthlyResponse\x12(\n\x05\x65rror\x18\x01 \x01(\x0b\x32\x19.didi.cloud.base.v1.Error\"\x90\x01\n\x16\x43hangeToMonthlyRequest\x12*\n\x06header\x18\x01 \x01(\x0b\x32\x1a.didi.cloud.base.v1.Header\x12\x11\n\tpayPeriod\x18\x02 \x01(\x05\x12\x37\n\x08resource\x18\x03 \x03(\x0b\x32%.didi.cloud.bill.v1.ResourceItemInput\"C\n\x17\x43hangeToMonthlyResponse\x12(\n\x05\x65rror\x18\x01 \x01(\x0b\x32\x19.didi.cloud.base.v1.Error\"\xac\x01\n\x1b\x43hangeExpireStrategyRequest\x12*\n\x06header\x18\x01 \x01(\x0b\x32\x1a.didi.cloud.base.v1.Header\x12\x14\n\x0c\x61utoRenewCnt\x18\x02 \x01(\x05\x12\x12\n\nautoSwitch\x18\x03 \x01(\x08\x12\x37\n\x08resource\x18\x04 \x03(\x0b\x32%.didi.cloud.bill.v1.ResourceItemInput\"H\n\x1c\x43hangeExpireStrategyResponse\x12(\n\x05\x65rror\x18\x01 \x01(\x0b\x32\x19.didi.cloud.base.v1.Error\"\xb2\x01\n\x12\x43heckDc2PriceInput\x12\r\n\x05\x63ount\x18\x01 \x01(\x05\x12\x11\n\tpayPeriod\x18\x02 \x01(\x05\x12\x10\n\x08\x64\x63\x32Model\x18\x03 \x01(\t\x12\x33\n\x03\x65ip\x18\x04 \x01(\x0b\x32&.didi.cloud.bill.v1.CheckEipPriceInput\x12\x33\n\x03\x65\x62s\x18\x05 \x03(\x0b\x32&.didi.cloud.bill.v1.CheckEbsPriceInput\"a\n\x12\x43heckEipPriceInput\x12\r\n\x05\x63ount\x18\x01 \x01(\x05\x12\x11\n\tpayPeriod\x18\x02 \x01(\x05\x12\x11\n\tbandwidth\x18\x03 \x01(\x05\x12\x16\n\x0e\x63hargeWithFlow\x18\x04 \x01(\x08\"V\n\x12\x43heckEbsPriceInput\x12\r\n\x05\x63ount\x18\x01 \x01(\x05\x12\x11\n\tpayPeriod\x18\x02 \x01(\x05\x12\x0c\n\x04size\x18\x03 \x01(\x05\x12\x10\n\x08\x64iskType\x18\x04 \x01(\t\"\xa3\x01\n\x14\x43heckDc2PriceRequest\x12*\n\x06header\x18\x01 \x01(\x0b\x32\x1a.didi.cloud.base.v1.Header\x12\x13\n\x0b\x63heckCoupon\x18\x02 \x01(\x08\x12\x10\n\x08isChange\x18\x03 \x01(\x08\x12\x38\n\x08\x64\x63\x32Goods\x18\x04 \x01(\x0b\x32&.didi.cloud.bill.v1.CheckDc2PriceInput\"\xa3\x01\n\x14\x43heckEipPriceRequest\x12*\n\x06header\x18\x01 \x01(\x0b\x32\x1a.didi.cloud.base.v1.Header\x12\x13\n\x0b\x63heckCoupon\x18\x02 \x01(\x08\x12\x10\n\x08isChange\x18\x03 \x01(\x08\x12\x38\n\x08\x65ipGoods\x18\x04 \x01(\x0b\x32&.didi.cloud.bill.v1.CheckEipPriceInput\"\xa3\x01\n\x14\x43heckEbsPriceRequest\x12*\n\x06header\x18\x01 \x01(\x0b\x32\x1a.didi.cloud.base.v1.Header\x12\x13\n\x0b\x63heckCoupon\x18\x02 \x01(\x08\x12\x10\n\x08isChange\x18\x03 \x01(\x08\x12\x38\n\x08\x65\x62sGoods\x18\x04 \x01(\x0b\x32&.didi.cloud.bill.v1.CheckEbsPriceInput\"\xe5\x01\n\x0e\x43heckPriceInfo\x12\x14\n\x0c\x62\x65stCouponId\x18\x01 \x01(\t\x12\x13\n\x0b\x63\x61shBalance\x18\x02 \x01(\x03\x12\x15\n\rcouponBalance\x18\x03 \x01(\x03\x12\x13\n\x0b\x66rozenPrice\x18\x04 \x01(\x03\x12\x17\n\x0fisClearToCreate\x18\x05 \x01(\x08\x12\x13\n\x0boriginPrice\x18\x06 \x01(\x03\x12\x0f\n\x07payType\x18\x07 \x01(\t\x12\x15\n\rpostPaidPrice\x18\x08 \x01(\x03\x12\x14\n\x0cprePaidPrice\x18\t \x01(\x03\x12\x10\n\x08subPrice\x18\n \x01(\x03\"p\n\x12\x43heckPriceResponse\x12(\n\x05\x65rror\x18\x01 \x01(\x0b\x32\x19.didi.cloud.base.v1.Error\x12\x30\n\x04\x64\x61ta\x18\x02 \x01(\x0b\x32\".didi.cloud.bill.v1.CheckPriceInfo\"*\n\x12GetChargeInfoInput\x12\x14\n\x0cresourceUuid\x18\x01 \x01(\t\"\x83\x01\n\x1bGetChargeInfoAndSpecRequest\x12*\n\x06header\x18\x01 \x01(\x0b\x32\x1a.didi.cloud.base.v1.Header\x12\x38\n\x08resource\x18\x02 \x03(\x0b\x32&.didi.cloud.bill.v1.GetChargeInfoInput\"\x87\x01\n\x14\x44\x63\x32\x43hargeInfoAndSpec\x12\x14\n\x0cresourceUuid\x18\x01 \x01(\t\x12.\n\x06\x63harge\x18\x02 \x01(\x0b\x32\x1e.didi.cloud.bill.v1.ChargeInfo\x12)\n\x04spec\x18\x03 \x01(\x0b\x32\x1b.didi.cloud.bill.v1.Dc2Spec\"\x87\x01\n\x14\x45ipChargeInfoAndSpec\x12\x14\n\x0cresourceUuid\x18\x01 \x01(\t\x12.\n\x06\x63harge\x18\x02 \x01(\x0b\x32\x1e.didi.cloud.bill.v1.ChargeInfo\x12)\n\x04spec\x18\x03 \x01(\x0b\x32\x1b.didi.cloud.bill.v1.EipSpec\"\x87\x01\n\x14\x45\x62sChargeInfoAndSpec\x12\x14\n\x0cresourceUuid\x18\x01 \x01(\t\x12.\n\x06\x63harge\x18\x02 \x01(\x0b\x32\x1e.didi.cloud.bill.v1.ChargeInfo\x12)\n\x04spec\x18\x03 \x01(\x0b\x32\x1b.didi.cloud.bill.v1.EbsSpec\"\x83\x01\n\x1fGetDc2ChargeInfoAndSpecResponse\x12(\n\x05\x65rror\x18\x01 \x01(\x0b\x32\x19.didi.cloud.base.v1.Error\x12\x36\n\x04\x64\x61ta\x18\x02 \x03(\x0b\x32(.didi.cloud.bill.v1.Dc2ChargeInfoAndSpec\"\x83\x01\n\x1fGetEipChargeInfoAndSpecResponse\x12(\n\x05\x65rror\x18\x01 \x01(\x0b\x32\x19.didi.cloud.base.v1.Error\x12\x36\n\x04\x64\x61ta\x18\x02 \x03(\x0b\x32(.didi.cloud.bill.v1.EipChargeInfoAndSpec\"\x83\x01\n\x1fGetEbsChargeInfoAndSpecResponse\x12(\n\x05\x65rror\x18\x01 \x01(\x0b\x32\x19.didi.cloud.base.v1.Error\x12\x36\n\x04\x64\x61ta\x18\x02 \x03(\x0b\x32(.didi.cloud.bill.v1.EbsChargeInfoAndSpec2\xff\x08\n\x04\x42ill\x12\x63\n\x0c\x43ontinueList\x12\'.didi.cloud.bill.v1.ContinueListRequest\x1a(.didi.cloud.bill.v1.ContinueListResponse\"\x00\x12l\n\x0f\x43ontinueMonthly\x12*.didi.cloud.bill.v1.ContinueMonthlyRequest\x1a+.didi.cloud.bill.v1.ContinueMonthlyResponse\"\x00\x12l\n\x0f\x43hangeToMonthly\x12*.didi.cloud.bill.v1.ChangeToMonthlyRequest\x1a+.didi.cloud.bill.v1.ChangeToMonthlyResponse\"\x00\x12{\n\x14\x43hangeExpireStrategy\x12/.didi.cloud.bill.v1.ChangeExpireStrategyRequest\x1a\x30.didi.cloud.bill.v1.ChangeExpireStrategyResponse\"\x00\x12\x63\n\rCheckDc2Price\x12(.didi.cloud.bill.v1.CheckDc2PriceRequest\x1a&.didi.cloud.bill.v1.CheckPriceResponse\"\x00\x12\x63\n\rCheckEipPrice\x12(.didi.cloud.bill.v1.CheckEipPriceRequest\x1a&.didi.cloud.bill.v1.CheckPriceResponse\"\x00\x12\x63\n\rCheckEbsPrice\x12(.didi.cloud.bill.v1.CheckEbsPriceRequest\x1a&.didi.cloud.bill.v1.CheckPriceResponse\"\x00\x12\x81\x01\n\x17GetDc2ChargeInfoAndSpec\x12/.didi.cloud.bill.v1.GetChargeInfoAndSpecRequest\x1a\x33.didi.cloud.bill.v1.GetDc2ChargeInfoAndSpecResponse\"\x00\x12\x81\x01\n\x17GetEipChargeInfoAndSpec\x12/.didi.cloud.bill.v1.GetChargeInfoAndSpecRequest\x1a\x33.didi.cloud.bill.v1.GetEipChargeInfoAndSpecResponse\"\x00\x12\x81\x01\n\x17GetEbsChargeInfoAndSpec\x12/.didi.cloud.bill.v1.GetChargeInfoAndSpecRequest\x1a\x33.didi.cloud.bill.v1.GetEbsChargeInfoAndSpecResponse\"\x00\x42x\n\x13\x63om.didiyun.bill.v1P\x01Z.github.com/didiyun/didiyun-go-sdk/bill/v1;bill\xf8\x01\x01\xaa\x02\x14\x44idi.Dicloud.Bill.V1\xca\x02\x14\x44idi\\Dicloud\\Bill\\V1b\x06proto3')
+  serialized_pb=_b('\n\x12\x62ill/v1/bill.proto\x12\x12\x64idi.cloud.bill.v1\x1a\x12\x62\x61se/v1/base.proto\"^\n\x07\x44\x63\x32Spec\x12\x0e\n\x06\x63puNum\x18\x01 \x01(\x05\x12\x0e\n\x06gpuNum\x18\x02 \x01(\x05\x12\x12\n\nmemorySize\x18\x03 \x01(\x03\x12\x10\n\x08\x64iskSize\x18\x04 \x01(\x03\x12\r\n\x05model\x18\x05 \x01(\t\"0\n\x07\x45ipSpec\x12\x11\n\tbandwidth\x18\x01 \x01(\x03\x12\x12\n\nchargeType\x18\x02 \x01(\t\")\n\x07\x45\x62sSpec\x12\x0c\n\x04size\x18\x01 \x01(\x03\x12\x10\n\x08\x64iskType\x18\x02 \x01(\t\"\x98\x01\n\x0cResourceSpec\x12,\n\x07\x64\x63\x32Spec\x18\x01 \x01(\x0b\x32\x1b.didi.cloud.bill.v1.Dc2Spec\x12,\n\x07\x65ipSpec\x18\x02 \x01(\x0b\x32\x1b.didi.cloud.bill.v1.EipSpec\x12,\n\x07\x65\x62sSpec\x18\x03 \x01(\x0b\x32\x1b.didi.cloud.bill.v1.EbsSpec\"\xd1\x01\n\nChargeInfo\x12\x0f\n\x07\x65ndTime\x18\x01 \x01(\x03\x12\x15\n\rcostThisMonth\x18\x02 \x01(\x01\x12\x42\n\nchargeInfo\x18\x03 \x03(\x0b\x32..didi.cloud.bill.v1.ChargeInfo.ChargeInfoEntry\x1aW\n\x0f\x43hargeInfoEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\x33\n\x05value\x18\x02 \x01(\x0b\x32$.didi.cloud.bill.v1.FactorRuleDetail:\x02\x38\x01\"M\n\x10\x46\x61\x63torRuleDetail\x12\x14\n\x0c\x61utoRenewCnt\x18\x04 \x01(\x03\x12\x12\n\nautoSwitch\x18\x05 \x01(\x08\x12\x0f\n\x07payType\x18\x06 \x01(\t\"\x8b\x01\n\tBuyDetail\x12\x12\n\nunitVolume\x18\x01 \x01(\x03\x12\x1a\n\x12volumeUnitDescribe\x18\x02 \x01(\t\x12\r\n\x05range\x18\x03 \x03(\x03\x12\n\n\x02in\x18\x04 \x03(\x03\x12\x11\n\tunitPrice\x18\x05 \x01(\x01\x12\r\n\x05value\x18\x06 \x01(\x03\x12\x11\n\trealPrice\x18\x07 \x01(\x01\";\n\x10\x46\x61\x63torRuleFilter\x12\x0b\n\x03min\x18\x01 \x01(\x03\x12\x0b\n\x03max\x18\x02 \x01(\x03\x12\r\n\x05isTop\x18\x03 \x01(\x08\"|\n\x15\x43ontinueListCondition\x12\x11\n\tstartTime\x18\x01 \x01(\x03\x12\x0f\n\x07\x65ndTime\x18\x02 \x01(\x03\x12\x14\n\x0cresourceType\x18\x03 \x01(\t\x12\x10\n\x08regionId\x18\x04 \x01(\t\x12\x17\n\x0f\x61utoRenewFilter\x18\x05 \x01(\t\"\x9d\x01\n\x13\x43ontinueListRequest\x12*\n\x06header\x18\x01 \x01(\x0b\x32\x1a.didi.cloud.base.v1.Header\x12\r\n\x05start\x18\x02 \x01(\x05\x12\r\n\x05limit\x18\x03 \x01(\x05\x12<\n\tcondition\x18\x05 \x01(\x0b\x32).didi.cloud.bill.v1.ContinueListCondition\"x\n\x12ResourceItemOutput\x12\x14\n\x0cresourceUuid\x18\x01 \x01(\t\x12\x14\n\x0cresourcetype\x18\x02 \x01(\t\x12\x36\n\x0cresourceSpec\x18\x03 \x01(\x0b\x32 .didi.cloud.bill.v1.ResourceSpec\"\x93\x02\n\x10\x43ontinueListItem\x12\x14\n\x0cresourceUuid\x18\x01 \x01(\t\x12\x14\n\x0cresourceType\x18\x02 \x01(\t\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x10\n\x08regionId\x18\x04 \x01(\t\x12\x0f\n\x07\x65ndTime\x18\x05 \x01(\x03\x12\x14\n\x0c\x61utoRenewCnt\x18\x06 \x01(\x05\x12\x12\n\nautoSwitch\x18\x07 \x01(\x08\x12\x36\n\x0cresourceSpec\x18\x08 \x01(\x0b\x32 .didi.cloud.bill.v1.ResourceSpec\x12@\n\x10\x62indingResources\x18\t \x03(\x0b\x32&.didi.cloud.bill.v1.ResourceItemOutput\"\xd0\x01\n\x14\x43ontinueListResponse\x12(\n\x05\x65rror\x18\x01 \x01(\x0b\x32\x19.didi.cloud.base.v1.Error\x12;\n\x04\x64\x61ta\x18\x02 \x01(\x0b\x32-.didi.cloud.bill.v1.ContinueListResponse.Data\x1aQ\n\x04\x44\x61ta\x12:\n\x0c\x63ontinueList\x18\x01 \x03(\x0b\x32$.didi.cloud.bill.v1.ContinueListItem\x12\r\n\x05total\x18\x02 \x01(\x05\"?\n\x11ResourceItemInput\x12\x14\n\x0cresourceUuid\x18\x01 \x01(\t\x12\x14\n\x0cresourceType\x18\x02 \x01(\t\"\x90\x01\n\x16\x43ontinueMonthlyRequest\x12*\n\x06header\x18\x01 \x01(\x0b\x32\x1a.didi.cloud.base.v1.Header\x12\x11\n\tpayPeriod\x18\x02 \x01(\x05\x12\x37\n\x08resource\x18\x03 \x03(\x0b\x32%.didi.cloud.bill.v1.ResourceItemInput\"C\n\x17\x43ontinueMonthlyResponse\x12(\n\x05\x65rror\x18\x01 \x01(\x0b\x32\x19.didi.cloud.base.v1.Error\"\x90\x01\n\x16\x43hangeToMonthlyRequest\x12*\n\x06header\x18\x01 \x01(\x0b\x32\x1a.didi.cloud.base.v1.Header\x12\x11\n\tpayPeriod\x18\x02 \x01(\x05\x12\x37\n\x08resource\x18\x03 \x03(\x0b\x32%.didi.cloud.bill.v1.ResourceItemInput\"C\n\x17\x43hangeToMonthlyResponse\x12(\n\x05\x65rror\x18\x01 \x01(\x0b\x32\x19.didi.cloud.base.v1.Error\"\xac\x01\n\x1b\x43hangeExpireStrategyRequest\x12*\n\x06header\x18\x01 \x01(\x0b\x32\x1a.didi.cloud.base.v1.Header\x12\x14\n\x0c\x61utoRenewCnt\x18\x02 \x01(\x05\x12\x12\n\nautoSwitch\x18\x03 \x01(\x08\x12\x37\n\x08resource\x18\x04 \x03(\x0b\x32%.didi.cloud.bill.v1.ResourceItemInput\"H\n\x1c\x43hangeExpireStrategyResponse\x12(\n\x05\x65rror\x18\x01 \x01(\x0b\x32\x19.didi.cloud.base.v1.Error\"\xc3\x01\n\x12\x43heckDc2PriceInput\x12\r\n\x05\x63ount\x18\x01 \x01(\x05\x12\x11\n\tpayPeriod\x18\x02 \x01(\x05\x12\x10\n\x08\x64\x63\x32Model\x18\x03 \x01(\t\x12\x33\n\x03\x65ip\x18\x04 \x01(\x0b\x32&.didi.cloud.bill.v1.CheckEipPriceInput\x12\x33\n\x03\x65\x62s\x18\x05 \x03(\x0b\x32&.didi.cloud.bill.v1.CheckEbsPriceInput\x12\x0f\n\x07\x64\x63\x32Uuid\x18\x06 \x01(\t\"r\n\x12\x43heckEipPriceInput\x12\r\n\x05\x63ount\x18\x01 \x01(\x05\x12\x11\n\tpayPeriod\x18\x02 \x01(\x05\x12\x11\n\tbandwidth\x18\x03 \x01(\x05\x12\x16\n\x0e\x63hargeWithFlow\x18\x04 \x01(\x08\x12\x0f\n\x07\x65ipUuid\x18\x05 \x01(\t\"g\n\x12\x43heckEbsPriceInput\x12\r\n\x05\x63ount\x18\x01 \x01(\x05\x12\x11\n\tpayPeriod\x18\x02 \x01(\x05\x12\x0c\n\x04size\x18\x03 \x01(\x05\x12\x10\n\x08\x64iskType\x18\x04 \x01(\t\x12\x0f\n\x07\x65\x62sUuid\x18\x05 \x01(\t\"\xa3\x01\n\x14\x43heckDc2PriceRequest\x12*\n\x06header\x18\x01 \x01(\x0b\x32\x1a.didi.cloud.base.v1.Header\x12\x13\n\x0b\x63heckCoupon\x18\x02 \x01(\x08\x12\x10\n\x08isChange\x18\x03 \x01(\x08\x12\x38\n\x08\x64\x63\x32Goods\x18\x04 \x01(\x0b\x32&.didi.cloud.bill.v1.CheckDc2PriceInput\"\xa3\x01\n\x14\x43heckEipPriceRequest\x12*\n\x06header\x18\x01 \x01(\x0b\x32\x1a.didi.cloud.base.v1.Header\x12\x13\n\x0b\x63heckCoupon\x18\x02 \x01(\x08\x12\x10\n\x08isChange\x18\x03 \x01(\x08\x12\x38\n\x08\x65ipGoods\x18\x04 \x01(\x0b\x32&.didi.cloud.bill.v1.CheckEipPriceInput\"\xa3\x01\n\x14\x43heckEbsPriceRequest\x12*\n\x06header\x18\x01 \x01(\x0b\x32\x1a.didi.cloud.base.v1.Header\x12\x13\n\x0b\x63heckCoupon\x18\x02 \x01(\x08\x12\x10\n\x08isChange\x18\x03 \x01(\x08\x12\x38\n\x08\x65\x62sGoods\x18\x04 \x01(\x0b\x32&.didi.cloud.bill.v1.CheckEbsPriceInput\"\xe5\x01\n\x0e\x43heckPriceInfo\x12\x14\n\x0c\x62\x65stCouponId\x18\x01 \x01(\t\x12\x13\n\x0b\x63\x61shBalance\x18\x02 \x01(\x03\x12\x15\n\rcouponBalance\x18\x03 \x01(\x03\x12\x13\n\x0b\x66rozenPrice\x18\x04 \x01(\x03\x12\x17\n\x0fisClearToCreate\x18\x05 \x01(\x08\x12\x13\n\x0boriginPrice\x18\x06 \x01(\x03\x12\x0f\n\x07payType\x18\x07 \x01(\t\x12\x15\n\rpostPaidPrice\x18\x08 \x01(\x03\x12\x14\n\x0cprePaidPrice\x18\t \x01(\x03\x12\x10\n\x08subPrice\x18\n \x01(\x03\"p\n\x12\x43heckPriceResponse\x12(\n\x05\x65rror\x18\x01 \x01(\x0b\x32\x19.didi.cloud.base.v1.Error\x12\x30\n\x04\x64\x61ta\x18\x02 \x01(\x0b\x32\".didi.cloud.bill.v1.CheckPriceInfo\"*\n\x12GetChargeInfoInput\x12\x14\n\x0cresourceUuid\x18\x01 \x01(\t\"\x83\x01\n\x1bGetChargeInfoAndSpecRequest\x12*\n\x06header\x18\x01 \x01(\x0b\x32\x1a.didi.cloud.base.v1.Header\x12\x38\n\x08resource\x18\x02 \x03(\x0b\x32&.didi.cloud.bill.v1.GetChargeInfoInput\"\x87\x01\n\x14\x44\x63\x32\x43hargeInfoAndSpec\x12\x14\n\x0cresourceUuid\x18\x01 \x01(\t\x12.\n\x06\x63harge\x18\x02 \x01(\x0b\x32\x1e.didi.cloud.bill.v1.ChargeInfo\x12)\n\x04spec\x18\x03 \x01(\x0b\x32\x1b.didi.cloud.bill.v1.Dc2Spec\"\x87\x01\n\x14\x45ipChargeInfoAndSpec\x12\x14\n\x0cresourceUuid\x18\x01 \x01(\t\x12.\n\x06\x63harge\x18\x02 \x01(\x0b\x32\x1e.didi.cloud.bill.v1.ChargeInfo\x12)\n\x04spec\x18\x03 \x01(\x0b\x32\x1b.didi.cloud.bill.v1.EipSpec\"\x87\x01\n\x14\x45\x62sChargeInfoAndSpec\x12\x14\n\x0cresourceUuid\x18\x01 \x01(\t\x12.\n\x06\x63harge\x18\x02 \x01(\x0b\x32\x1e.didi.cloud.bill.v1.ChargeInfo\x12)\n\x04spec\x18\x03 \x01(\x0b\x32\x1b.didi.cloud.bill.v1.EbsSpec\"\x83\x01\n\x1fGetDc2ChargeInfoAndSpecResponse\x12(\n\x05\x65rror\x18\x01 \x01(\x0b\x32\x19.didi.cloud.base.v1.Error\x12\x36\n\x04\x64\x61ta\x18\x02 \x03(\x0b\x32(.didi.cloud.bill.v1.Dc2ChargeInfoAndSpec\"\x83\x01\n\x1fGetEipChargeInfoAndSpecResponse\x12(\n\x05\x65rror\x18\x01 \x01(\x0b\x32\x19.didi.cloud.base.v1.Error\x12\x36\n\x04\x64\x61ta\x18\x02 \x03(\x0b\x32(.didi.cloud.bill.v1.EipChargeInfoAndSpec\"\x83\x01\n\x1fGetEbsChargeInfoAndSpecResponse\x12(\n\x05\x65rror\x18\x01 \x01(\x0b\x32\x19.didi.cloud.base.v1.Error\x12\x36\n\x04\x64\x61ta\x18\x02 \x03(\x0b\x32(.didi.cloud.bill.v1.EbsChargeInfoAndSpec2\xff\x08\n\x04\x42ill\x12\x63\n\x0c\x43ontinueList\x12\'.didi.cloud.bill.v1.ContinueListRequest\x1a(.didi.cloud.bill.v1.ContinueListResponse\"\x00\x12l\n\x0f\x43ontinueMonthly\x12*.didi.cloud.bill.v1.ContinueMonthlyRequest\x1a+.didi.cloud.bill.v1.ContinueMonthlyResponse\"\x00\x12l\n\x0f\x43hangeToMonthly\x12*.didi.cloud.bill.v1.ChangeToMonthlyRequest\x1a+.didi.cloud.bill.v1.ChangeToMonthlyResponse\"\x00\x12{\n\x14\x43hangeExpireStrategy\x12/.didi.cloud.bill.v1.ChangeExpireStrategyRequest\x1a\x30.didi.cloud.bill.v1.ChangeExpireStrategyResponse\"\x00\x12\x63\n\rCheckDc2Price\x12(.didi.cloud.bill.v1.CheckDc2PriceRequest\x1a&.didi.cloud.bill.v1.CheckPriceResponse\"\x00\x12\x63\n\rCheckEipPrice\x12(.didi.cloud.bill.v1.CheckEipPriceRequest\x1a&.didi.cloud.bill.v1.CheckPriceResponse\"\x00\x12\x63\n\rCheckEbsPrice\x12(.didi.cloud.bill.v1.CheckEbsPriceRequest\x1a&.didi.cloud.bill.v1.CheckPriceResponse\"\x00\x12\x81\x01\n\x17GetDc2ChargeInfoAndSpec\x12/.didi.cloud.bill.v1.GetChargeInfoAndSpecRequest\x1a\x33.didi.cloud.bill.v1.GetDc2ChargeInfoAndSpecResponse\"\x00\x12\x81\x01\n\x17GetEipChargeInfoAndSpec\x12/.didi.cloud.bill.v1.GetChargeInfoAndSpecRequest\x1a\x33.didi.cloud.bill.v1.GetEipChargeInfoAndSpecResponse\"\x00\x12\x81\x01\n\x17GetEbsChargeInfoAndSpec\x12/.didi.cloud.bill.v1.GetChargeInfoAndSpecRequest\x1a\x33.didi.cloud.bill.v1.GetEbsChargeInfoAndSpecResponse\"\x00\x42x\n\x13\x63om.didiyun.bill.v1P\x01Z.github.com/didiyun/didiyun-go-sdk/bill/v1;bill\xf8\x01\x01\xaa\x02\x14\x44idi.Dicloud.Bill.V1\xca\x02\x14\x44idi\\Dicloud\\Bill\\V1b\x06proto3')
   ,
   dependencies=[base_dot_v1_dot_base__pb2.DESCRIPTOR,])
 
@@ -1086,6 +1086,13 @@ _CHECKDC2PRICEINPUT = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='dc2Uuid', full_name='didi.cloud.bill.v1.CheckDc2PriceInput.dc2Uuid', index=5,
+      number=6, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -1099,7 +1106,7 @@ _CHECKDC2PRICEINPUT = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=2544,
-  serialized_end=2722,
+  serialized_end=2739,
 )
 
 
@@ -1138,6 +1145,13 @@ _CHECKEIPPRICEINPUT = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='eipUuid', full_name='didi.cloud.bill.v1.CheckEipPriceInput.eipUuid', index=4,
+      number=5, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -1150,8 +1164,8 @@ _CHECKEIPPRICEINPUT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2724,
-  serialized_end=2821,
+  serialized_start=2741,
+  serialized_end=2855,
 )
 
 
@@ -1190,6 +1204,13 @@ _CHECKEBSPRICEINPUT = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='ebsUuid', full_name='didi.cloud.bill.v1.CheckEbsPriceInput.ebsUuid', index=4,
+      number=5, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -1202,8 +1223,8 @@ _CHECKEBSPRICEINPUT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2823,
-  serialized_end=2909,
+  serialized_start=2857,
+  serialized_end=2960,
 )
 
 
@@ -1254,8 +1275,8 @@ _CHECKDC2PRICEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2912,
-  serialized_end=3075,
+  serialized_start=2963,
+  serialized_end=3126,
 )
 
 
@@ -1306,8 +1327,8 @@ _CHECKEIPPRICEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3078,
-  serialized_end=3241,
+  serialized_start=3129,
+  serialized_end=3292,
 )
 
 
@@ -1358,8 +1379,8 @@ _CHECKEBSPRICEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3244,
-  serialized_end=3407,
+  serialized_start=3295,
+  serialized_end=3458,
 )
 
 
@@ -1452,8 +1473,8 @@ _CHECKPRICEINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3410,
-  serialized_end=3639,
+  serialized_start=3461,
+  serialized_end=3690,
 )
 
 
@@ -1490,8 +1511,8 @@ _CHECKPRICERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3641,
-  serialized_end=3753,
+  serialized_start=3692,
+  serialized_end=3804,
 )
 
 
@@ -1521,8 +1542,8 @@ _GETCHARGEINFOINPUT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3755,
-  serialized_end=3797,
+  serialized_start=3806,
+  serialized_end=3848,
 )
 
 
@@ -1559,8 +1580,8 @@ _GETCHARGEINFOANDSPECREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3800,
-  serialized_end=3931,
+  serialized_start=3851,
+  serialized_end=3982,
 )
 
 
@@ -1604,8 +1625,8 @@ _DC2CHARGEINFOANDSPEC = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3934,
-  serialized_end=4069,
+  serialized_start=3985,
+  serialized_end=4120,
 )
 
 
@@ -1649,8 +1670,8 @@ _EIPCHARGEINFOANDSPEC = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4072,
-  serialized_end=4207,
+  serialized_start=4123,
+  serialized_end=4258,
 )
 
 
@@ -1694,8 +1715,8 @@ _EBSCHARGEINFOANDSPEC = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4210,
-  serialized_end=4345,
+  serialized_start=4261,
+  serialized_end=4396,
 )
 
 
@@ -1732,8 +1753,8 @@ _GETDC2CHARGEINFOANDSPECRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4348,
-  serialized_end=4479,
+  serialized_start=4399,
+  serialized_end=4530,
 )
 
 
@@ -1770,8 +1791,8 @@ _GETEIPCHARGEINFOANDSPECRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4482,
-  serialized_end=4613,
+  serialized_start=4533,
+  serialized_end=4664,
 )
 
 
@@ -1808,8 +1829,8 @@ _GETEBSCHARGEINFOANDSPECRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4616,
-  serialized_end=4747,
+  serialized_start=4667,
+  serialized_end=4798,
 )
 
 _RESOURCESPEC.fields_by_name['dc2Spec'].message_type = _DC2SPEC
@@ -2176,8 +2197,8 @@ _BILL = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=4750,
-  serialized_end=5901,
+  serialized_start=4801,
+  serialized_end=5952,
   methods=[
   _descriptor.MethodDescriptor(
     name='ContinueList',
