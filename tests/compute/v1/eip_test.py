@@ -17,7 +17,7 @@ class TestEip(unittest.TestCase):
         print(createEipReq)
         self.assertEqual(createEipResp.error.errno, 0)
         print("createEip, jobUuid:", createEipResp.data[0].jobUuid)
-        success = cli.wait_for_job_result(createEipResp.data[0].jobUuid)  # 轮询等待结果
+        success = cli.wait_for_job_result('gz', createEipResp.data[0].jobUuid)  # 轮询等待结果
         print("createEip, success:", success)
         self.assertTrue(success)
 
@@ -68,7 +68,7 @@ class TestEip(unittest.TestCase):
         print(attachEipToDc2Resp)
         self.assertEqual(attachEipToDc2Resp.error.errno, 0)
         print("attachEipToDc2, jobUuid:", attachEipToDc2Resp.data[0].jobUuid)
-        success = cli.wait_for_job_result(attachEipToDc2Resp.data[0].jobUuid)  # 轮询等待结果
+        success = cli.wait_for_job_result('gz', attachEipToDc2Resp.data[0].jobUuid)  # 轮询等待结果
         print("attachEipToDc2, success:", success)
         self.assertTrue(success)
 
@@ -86,7 +86,7 @@ class TestEip(unittest.TestCase):
         print(detachEipFromDc2Resp)
         self.assertEqual(detachEipFromDc2Resp.error.errno, 0)
         print("detachEipFromDc2, jobUuid:", detachEipFromDc2Resp.data[0].jobUuid)
-        success = cli.wait_for_job_result(detachEipFromDc2Resp.data[0].jobUuid)  # 轮询等待结果
+        success = cli.wait_for_job_result('gz', detachEipFromDc2Resp.data[0].jobUuid)  # 轮询等待结果
         print("detachEipFromDc2, success:", success)
         self.assertTrue(success)
 
@@ -104,7 +104,7 @@ class TestEip(unittest.TestCase):
         print(changeEipBandwidthResp)
         self.assertEqual(changeEipBandwidthResp.error.errno, 0)
         print("changeEipBandwidth, jobUuid:", changeEipBandwidthResp.data[0].jobUuid)
-        success = cli.wait_for_job_result(changeEipBandwidthResp.data[0].jobUuid)  # 轮询等待结果
+        success = cli.wait_for_job_result('gz', changeEipBandwidthResp.data[0].jobUuid)  # 轮询等待结果
         print("changeEipBandwidth, success:", success)
         self.assertTrue(success)
 
@@ -121,7 +121,7 @@ class TestEip(unittest.TestCase):
         print(deleteEipResp)
         self.assertEqual(deleteEipResp.error.errno, 0)
         print("deleteEip, jobUuid:", deleteEipResp.data[0].jobUuid)
-        success = cli.wait_for_job_result(deleteEipResp.data[0].jobUuid)  # 轮询等待结果
+        success = cli.wait_for_job_result('gz', deleteEipResp.data[0].jobUuid)  # 轮询等待结果
         print("deleteEip, success:", success)
         self.assertTrue(success)
 

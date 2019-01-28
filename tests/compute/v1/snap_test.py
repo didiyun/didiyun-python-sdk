@@ -22,7 +22,7 @@ class TestSnap(unittest.TestCase):
         print(createSnapResp)
         self.assertEqual(createSnapResp.error.errno, 0)
         print("createSnap, jobUuid:", createSnapResp.data[0].jobUuid)
-        success = cli.wait_for_job_result(createSnapResp.data[0].jobUuid)  # 轮询等待结果
+        success = cli.wait_for_job_result('gz', createSnapResp.data[0].jobUuid)  # 轮询等待结果
         print("createSnap, success:", success)
         self.assertTrue(success)
 
@@ -54,7 +54,7 @@ class TestSnap(unittest.TestCase):
         print(revertSnapResp)
         self.assertEqual(revertSnapResp.error.errno, 0)
         print("revertSnap, jobUuid:", revertSnapResp.data[0].jobUuid)
-        success = cli.wait_for_job_result(revertSnapResp.data[0].jobUuid)  # 轮询等待结果
+        success = cli.wait_for_job_result('gz', revertSnapResp.data[0].jobUuid)  # 轮询等待结果
         print("revertSnap, success:", success)
         self.assertTrue(success)
 
@@ -72,7 +72,7 @@ class TestSnap(unittest.TestCase):
         print(changeSnapNameResp)
         self.assertEqual(changeSnapNameResp.error.errno, 0)
         print("changeSnapName, jobUuid:", changeSnapNameResp.data[0].jobUuid)
-        success = cli.wait_for_job_result(changeSnapNameResp.data[0].jobUuid)  # 轮询等待结果
+        success = cli.wait_for_job_result('gz', changeSnapNameResp.data[0].jobUuid)  # 轮询等待结果
         print("changeSnapName, success:", success)
         self.assertTrue(success)
 
@@ -89,7 +89,7 @@ class TestSnap(unittest.TestCase):
         print(deleteSnapResp)
         self.assertEqual(deleteSnapResp.error.errno, 0)
         print("deleteSnap, jobUuid:", deleteSnapResp.data[0].jobUuid)
-        success = cli.wait_for_job_result(deleteSnapResp.data[0].jobUuid)  # 轮询等待结果
+        success = cli.wait_for_job_result('gz', deleteSnapResp.data[0].jobUuid)  # 轮询等待结果
         print("deleteSnap, success:", success)
         self.assertTrue(success)
 

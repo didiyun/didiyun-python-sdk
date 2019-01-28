@@ -62,7 +62,7 @@ class TestDc2(unittest.TestCase):
         print(createDc2Resp)
         self.assertEqual(createDc2Resp.error.errno, 0)
         print("createDc2, jobUuid:", createDc2Resp.data[0].jobUuid)
-        success = cli.wait_for_job_result(createDc2Resp.data[0].jobUuid)    # 轮询等待结果
+        success = cli.wait_for_job_result('gz', createDc2Resp.data[0].jobUuid)    # 轮询等待结果
         print("createDc2, success:",success)
         self.assertTrue(success)
 
@@ -105,7 +105,7 @@ class TestDc2(unittest.TestCase):
         print(stopDc2Resp)
         self.assertEqual(stopDc2Resp.error.errno, 0)
         print("stopDc2, jobUuid:", stopDc2Resp.data[0].jobUuid)
-        success = cli.wait_for_job_result(stopDc2Resp.data[0].jobUuid)  # 轮询等待结果
+        success = cli.wait_for_job_result('gz', stopDc2Resp.data[0].jobUuid)  # 轮询等待结果
         print("stopDc2, success:", success)
         self.assertTrue(success)
 
@@ -122,7 +122,7 @@ class TestDc2(unittest.TestCase):
         print(startDc2Resp)
         self.assertEqual(startDc2Resp.error.errno, 0)
         print("startDc2, jobUuid:", startDc2Resp.data[0].jobUuid)
-        success = cli.wait_for_job_result(startDc2Resp.data[0].jobUuid)  # 轮询等待结果
+        success = cli.wait_for_job_result('gz', startDc2Resp.data[0].jobUuid)  # 轮询等待结果
         print("startDc2, success:", success)
         self.assertTrue(success)
 
@@ -139,7 +139,7 @@ class TestDc2(unittest.TestCase):
         print(rebootDc2Resp)
         self.assertEqual(rebootDc2Resp.error.errno, 0)
         print("rebootDc2, jobUuid:", rebootDc2Resp.data[0].jobUuid)
-        success = cli.wait_for_job_result(rebootDc2Resp.data[0].jobUuid)  # 轮询等待结果
+        success = cli.wait_for_job_result('gz', rebootDc2Resp.data[0].jobUuid)  # 轮询等待结果
         print("rebootDc2, success:", success)
         self.assertTrue(success)
 
@@ -157,7 +157,7 @@ class TestDc2(unittest.TestCase):
         print(changeDc2NameResp)
         self.assertEqual(changeDc2NameResp.error.errno, 0)
         print("changeDc2Name, jobUuid:", changeDc2NameResp.data[0].jobUuid)
-        success = cli.wait_for_job_result(changeDc2NameResp.data[0].jobUuid)  # 轮询等待结果
+        success = cli.wait_for_job_result('gz', changeDc2NameResp.data[0].jobUuid)  # 轮询等待结果
         print("changeDc2Name, success:", success)
         self.assertTrue(success)
 
@@ -175,7 +175,7 @@ class TestDc2(unittest.TestCase):
         print(changeDc2PasswordResp)
         self.assertEqual(changeDc2PasswordResp.error.errno, 0)
         print("changeDc2Password, jobUuid:", changeDc2PasswordResp.data[0].jobUuid)
-        success = cli.wait_for_job_result(changeDc2PasswordResp.data[0].jobUuid)  # 轮询等待结果
+        success = cli.wait_for_job_result('gz', changeDc2PasswordResp.data[0].jobUuid)  # 轮询等待结果
         print("changeDc2Password, success:", success)
         self.assertTrue(success)
 
@@ -202,7 +202,7 @@ class TestDc2(unittest.TestCase):
         print(reinstallDc2SystemResp)
         self.assertEqual(reinstallDc2SystemResp.error.errno, 0)
         print("reinstallDc2System, jobUuid:", reinstallDc2SystemResp.data[0].jobUuid)
-        success = cli.wait_for_job_result(reinstallDc2SystemResp.data[0].jobUuid)  # 轮询等待结果
+        success = cli.wait_for_job_result('gz', reinstallDc2SystemResp.data[0].jobUuid)  # 轮询等待结果
         print("reinstallDc2System, success:", success)
         self.assertTrue(success)
 
@@ -220,7 +220,7 @@ class TestDc2(unittest.TestCase):
         print(changeDcSpecResp)
         self.assertEqual(changeDcSpecResp.error.errno, 0)
         print("changeDc2Spec, jobUuid:", changeDcSpecResp.data[0].jobUuid)
-        success = cli.wait_for_job_result(changeDcSpecResp.data[0].jobUuid)  # 轮询等待结果
+        success = cli.wait_for_job_result('gz', changeDcSpecResp.data[0].jobUuid)  # 轮询等待结果
         print("changeDc2Spec, success:", success)
         self.assertTrue(success)
 
@@ -264,7 +264,7 @@ class TestDc2(unittest.TestCase):
         print(destroyDc2Response)
         self.assertEqual(destroyDc2Response.error.errno, 0)
         print("destroyDc2, jobUuid:", destroyDc2Response.data[0].jobUuid)
-        success = cli.wait_for_job_result(destroyDc2Response.data[0].jobUuid)  # 轮询等待结果
+        success = cli.wait_for_job_result('gz', destroyDc2Response.data[0].jobUuid)  # 轮询等待结果
         print("destroyDc2, success:", success)
         self.assertTrue(success)
 

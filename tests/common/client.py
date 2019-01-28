@@ -31,7 +31,7 @@ class DicloudClient(object):
         self.snapStub = snap_pb2_grpc.SnapStub(self.channel)
         self.vpcStub = vpc_pb2_grpc.VpcStub(self.channel)
 
-    def wait_for_job_result(self, jobUuids):
+    def wait_for_job_result(self, regionId, jobUuids):
         allDone = False
         queryTimes = 0
         successResult = []
@@ -41,7 +41,7 @@ class DicloudClient(object):
         while not allDone:  # 轮询异步进度
             queryTimes = queryTimes + 1
             time.sleep(3)
-            jobResultResp = self.commonStub.JobResult(JobResultRequest(header=Header(regionId='gz'),
+            jobResultResp = self.commonStub.JobResult(JobResultRequest(header=Header(regionId=regionId),
                                                                         jobUuids=jobUuids))
             if jobResultResp.error.errno != 0:
                 print("query job uuids", jobUuids, "Result error, errmsg:", jobResultResp.error.errmsg)
