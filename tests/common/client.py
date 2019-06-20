@@ -8,6 +8,7 @@ from compute.v1.common_pb2 import JobResultRequest
 from base.v1.base_pb2 import Header
 from bill.v1 import bill_pb2_grpc
 from compute.v1 import common_pb2_grpc, dc2_pb2_grpc, ebs_pb2_grpc, eip_pb2_grpc, sg_pb2_grpc, snap_pb2_grpc, vpc_pb2_grpc
+from monitor.v1 import counter_pb2_grpc
 
 
 class DicloudClient(object):
@@ -30,6 +31,7 @@ class DicloudClient(object):
         self.sgStub = sg_pb2_grpc.SgStub(self.channel)
         self.snapStub = snap_pb2_grpc.SnapStub(self.channel)
         self.vpcStub = vpc_pb2_grpc.VpcStub(self.channel)
+        self.monitorStub = counter_pb2_grpc.MonitorStub(self.channel)
 
     def wait_for_job_result(self, regionId, jobUuids):
         allDone = False

@@ -22,7 +22,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='didi.cloud.compute.v1',
   syntax='proto3',
   serialized_options=_b('\n\026com.didiyun.compute.v1P\001Z4github.com/didiyun/didiyun-go-sdk/compute/v1;compute\370\001\001\252\002\027Didi.Dicloud.Compute.V1\312\002\027Didi\\Dicloud\\Compute\\V1'),
-  serialized_pb=_b('\n\x14\x63ompute/v1/dc2.proto\x12\x15\x64idi.cloud.compute.v1\x1a\x12\x62\x61se/v1/base.proto\x1a\x17\x63ompute/v1/common.proto\"i\n\x0fListDc2Response\x12(\n\x05\x65rror\x18\x01 \x01(\x0b\x32\x19.didi.cloud.base.v1.Error\x12,\n\x04\x64\x61ta\x18\x02 \x03(\x0b\x32\x1e.didi.cloud.compute.v1.Dc2Info\"\x94\x01\n\x10ListDc2Condition\x12\n\n\x02ip\x18\x01 \x01(\t\x12\x0b\n\x03\x65ip\x18\x02 \x01(\t\x12\x0f\n\x07\x64\x63\x32name\x18\x03 \x01(\t\x12\x10\n\x08vpcUuids\x18\x04 \x03(\t\x12\x0f\n\x07vpcUuid\x18\x05 \x01(\t\x12\x0e\n\x06sgUuid\x18\x06 \x01(\t\x12\x11\n\tsgExclude\x18\x07 \x01(\x08\x12\x10\n\x08\x64\x63\x32Uuids\x18\x08 \x03(\t\"\xa8\x01\n\x0eListDc2Request\x12*\n\x06header\x18\x01 \x01(\x0b\x32\x1a.didi.cloud.base.v1.Header\x12\r\n\x05start\x18\x02 \x01(\x05\x12\r\n\x05limit\x18\x03 \x01(\x05\x12\x10\n\x08simplify\x18\x04 \x01(\x08\x12:\n\tcondition\x18\x05 \x01(\x0b\x32\'.didi.cloud.compute.v1.ListDc2Condition\"\xc5\x01\n\x15GetDc2TotalCntRequest\x12*\n\x06header\x18\x01 \x01(\x0b\x32\x1a.didi.cloud.base.v1.Header\x12\n\n\x02ip\x18\x02 \x01(\t\x12\x0b\n\x03\x65ip\x18\x03 \x01(\t\x12\x0f\n\x07\x64\x63\x32name\x18\x04 \x01(\t\x12\x10\n\x08vpcUuids\x18\x05 \x03(\t\x12\x0f\n\x07vpcUuid\x18\x06 \x01(\t\x12\x0e\n\x06sgUuid\x18\x07 \x01(\t\x12\x11\n\tsgExclude\x18\x08 \x01(\x08\x12\x10\n\x08\x64\x63\x32Uuids\x18\t \x03(\t\"u\n\x16GetDc2TotalCntResponse\x12(\n\x05\x65rror\x18\x01 \x01(\x0b\x32\x19.didi.cloud.base.v1.Error\x12\x31\n\x04\x64\x61ta\x18\x02 \x03(\x0b\x32#.didi.cloud.compute.v1.TotalCntInfo\"R\n\x13GetDc2ByUuidRequest\x12*\n\x06header\x18\x01 \x01(\x0b\x32\x1a.didi.cloud.base.v1.Header\x12\x0f\n\x07\x64\x63\x32Uuid\x18\x02 \x01(\t\"n\n\x14GetDc2ByUuidResponse\x12(\n\x05\x65rror\x18\x01 \x01(\x0b\x32\x19.didi.cloud.base.v1.Error\x12,\n\x04\x64\x61ta\x18\x02 \x03(\x0b\x32\x1e.didi.cloud.compute.v1.Dc2Info\"\xc0\x01\n\x14\x43hangeDc2SpecRequest\x12*\n\x06header\x18\x01 \x01(\x0b\x32\x1a.didi.cloud.base.v1.Header\x12\x10\n\x08\x63ouponId\x18\x02 \x01(\t\x12>\n\x03\x64\x63\x32\x18\x03 \x03(\x0b\x32\x31.didi.cloud.compute.v1.ChangeDc2SpecRequest.Input\x1a*\n\x05Input\x12\x0f\n\x07\x64\x63\x32Uuid\x18\x01 \x01(\t\x12\x10\n\x08\x64\x63\x32Model\x18\x02 \x01(\t\"l\n\x15\x43hangeDc2SpecResponse\x12(\n\x05\x65rror\x18\x01 \x01(\x0b\x32\x19.didi.cloud.base.v1.Error\x12)\n\x04\x64\x61ta\x18\x02 \x03(\x0b\x32\x1b.didi.cloud.base.v1.JobInfo\"\xa0\x02\n\x19ReinstallDc2SystemRequest\x12*\n\x06header\x18\x01 \x01(\x0b\x32\x1a.didi.cloud.base.v1.Header\x12\x43\n\x03\x64\x63\x32\x18\x02 \x03(\x0b\x32\x36.didi.cloud.compute.v1.ReinstallDc2SystemRequest.Input\x1a\x91\x01\n\x05Input\x12\x0f\n\x07\x64\x63\x32Uuid\x18\x01 \x01(\t\x12\x0f\n\x07imgUuid\x18\x02 \x01(\t\x12\x13\n\x0bpubKeyUuids\x18\x03 \x03(\t\x12\x10\n\x08password\x18\x04 \x01(\t\x12\x1f\n\x17proSecurityAgentEnabled\x18\x05 \x01(\x08\x12\x1e\n\x16monitoringAgentEnabled\x18\x06 \x01(\x08\"q\n\x1aReinstallDc2SystemResponse\x12(\n\x05\x65rror\x18\x01 \x01(\x0b\x32\x19.didi.cloud.base.v1.Error\x12)\n\x04\x64\x61ta\x18\x02 \x03(\x0b\x32\x1b.didi.cloud.base.v1.JobInfo\"\xcf\x01\n\x11\x44\x65stroyDc2Request\x12*\n\x06header\x18\x01 \x01(\x0b\x32\x1a.didi.cloud.base.v1.Header\x12;\n\x03\x64\x63\x32\x18\x02 \x03(\x0b\x32..didi.cloud.compute.v1.DestroyDc2Request.Input\x12\x11\n\tdeleteEip\x18\x03 \x01(\x08\x12\x11\n\tdeleteEbs\x18\x04 \x01(\x08\x12\x11\n\tignoreSlb\x18\x05 \x01(\x08\x1a\x18\n\x05Input\x12\x0f\n\x07\x64\x63\x32Uuid\x18\x01 \x01(\t\"i\n\x12\x44\x65stroyDc2Response\x12(\n\x05\x65rror\x18\x01 \x01(\x0b\x32\x19.didi.cloud.base.v1.Error\x12)\n\x04\x64\x61ta\x18\x02 \x03(\x0b\x32\x1b.didi.cloud.base.v1.JobInfo\"\x92\x01\n\x0fStartDc2Request\x12*\n\x06header\x18\x01 \x01(\x0b\x32\x1a.didi.cloud.base.v1.Header\x12\x39\n\x03\x64\x63\x32\x18\x02 \x03(\x0b\x32,.didi.cloud.compute.v1.StartDc2Request.Input\x1a\x18\n\x05Input\x12\x0f\n\x07\x64\x63\x32Uuid\x18\x01 \x01(\t\"g\n\x10StartDc2Response\x12(\n\x05\x65rror\x18\x01 \x01(\x0b\x32\x19.didi.cloud.base.v1.Error\x12)\n\x04\x64\x61ta\x18\x02 \x03(\x0b\x32\x1b.didi.cloud.base.v1.JobInfo\"\x90\x01\n\x0eStopDc2Request\x12*\n\x06header\x18\x01 \x01(\x0b\x32\x1a.didi.cloud.base.v1.Header\x12\x38\n\x03\x64\x63\x32\x18\x02 \x03(\x0b\x32+.didi.cloud.compute.v1.StopDc2Request.Input\x1a\x18\n\x05Input\x12\x0f\n\x07\x64\x63\x32Uuid\x18\x01 \x01(\t\"f\n\x0fStopDc2Response\x12(\n\x05\x65rror\x18\x01 \x01(\x0b\x32\x19.didi.cloud.base.v1.Error\x12)\n\x04\x64\x61ta\x18\x02 \x03(\x0b\x32\x1b.didi.cloud.base.v1.JobInfo\"\x94\x01\n\x10RebootDc2Request\x12*\n\x06header\x18\x01 \x01(\x0b\x32\x1a.didi.cloud.base.v1.Header\x12:\n\x03\x64\x63\x32\x18\x02 \x03(\x0b\x32-.didi.cloud.compute.v1.RebootDc2Request.Input\x1a\x18\n\x05Input\x12\x0f\n\x07\x64\x63\x32Uuid\x18\x01 \x01(\t\"h\n\x11RebootDc2Response\x12(\n\x05\x65rror\x18\x01 \x01(\x0b\x32\x19.didi.cloud.base.v1.Error\x12)\n\x04\x64\x61ta\x18\x02 \x03(\x0b\x32\x1b.didi.cloud.base.v1.JobInfo\"\xaa\x01\n\x14\x43hangeDc2NameRequest\x12*\n\x06header\x18\x01 \x01(\x0b\x32\x1a.didi.cloud.base.v1.Header\x12>\n\x03\x64\x63\x32\x18\x02 \x03(\x0b\x32\x31.didi.cloud.compute.v1.ChangeDc2NameRequest.Input\x1a&\n\x05Input\x12\x0f\n\x07\x64\x63\x32Uuid\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\"l\n\x15\x43hangeDc2NameResponse\x12(\n\x05\x65rror\x18\x01 \x01(\x0b\x32\x19.didi.cloud.base.v1.Error\x12)\n\x04\x64\x61ta\x18\x02 \x03(\x0b\x32\x1b.didi.cloud.base.v1.JobInfo\"\xb6\x01\n\x18\x43hangeDc2PasswordRequest\x12*\n\x06header\x18\x01 \x01(\x0b\x32\x1a.didi.cloud.base.v1.Header\x12\x42\n\x03\x64\x63\x32\x18\x02 \x03(\x0b\x32\x35.didi.cloud.compute.v1.ChangeDc2PasswordRequest.Input\x1a*\n\x05Input\x12\x0f\n\x07\x64\x63\x32Uuid\x18\x01 \x01(\t\x12\x10\n\x08password\x18\x02 \x01(\t\"p\n\x19\x43hangeDc2PasswordResponse\x12(\n\x05\x65rror\x18\x01 \x01(\x0b\x32\x19.didi.cloud.base.v1.Error\x12)\n\x04\x64\x61ta\x18\x02 \x03(\x0b\x32\x1b.didi.cloud.base.v1.JobInfo\"\xaa\x05\n\x10\x43reateDc2Request\x12*\n\x06header\x18\x01 \x01(\x0b\x32\x1a.didi.cloud.base.v1.Header\x12\r\n\x05\x63ount\x18\x02 \x01(\x05\x12\x14\n\x0c\x61utoContinue\x18\x03 \x01(\x08\x12\x11\n\tpayPeriod\x18\x04 \x01(\x05\x12\x10\n\x08\x63ouponId\x18\x05 \x01(\t\x12\x0f\n\x07imgUuid\x18\x06 \x01(\t\x12\x10\n\x08snapUuid\x18\x07 \x01(\t\x12\x12\n\nsubnetUuid\x18\x08 \x01(\t\x12\x10\n\x08\x64\x63\x32Model\x18\t \x01(\t\x12\x13\n\x0bpubKeyUuids\x18\n \x03(\t\x12\x10\n\x08password\x18\x0b \x01(\t\x12\x14\n\x0crootDiskSize\x18\x0c \x01(\x05\x12\x14\n\x0crootDiskType\x18\r \x01(\t\x12\x0f\n\x07sgUuids\x18\x0e \x03(\t\x12\x0c\n\x04tags\x18\x0f \x03(\t\x12\x0c\n\x04name\x18\x10 \x01(\t\x12\x1f\n\x17proSecurityAgentEnabled\x18\x11 \x01(\x08\x12\x1e\n\x16monitoringAgentEnabled\x18\x12 \x01(\x08\x12\x38\n\x03\x65ip\x18\x13 \x01(\x0b\x32+.didi.cloud.compute.v1.CreateDc2Request.Eip\x12\x38\n\x03\x65\x62s\x18\x14 \x03(\x0b\x32+.didi.cloud.compute.v1.CreateDc2Request.Ebs\x1a>\n\x03\x45ip\x12\x11\n\tbandwidth\x18\x01 \x01(\x05\x12\x0c\n\x04tags\x18\x02 \x03(\t\x12\x16\n\x0e\x63hargeWithFlow\x18\x03 \x01(\x08\x1a\x62\n\x03\x45\x62s\x12\r\n\x05\x63ount\x18\x01 \x01(\x05\x12\x10\n\x08snapUuid\x18\x02 \x01(\t\x12\x10\n\x08\x64iskType\x18\x03 \x01(\t\x12\x0c\n\x04size\x18\x04 \x01(\x05\x12\x0c\n\x04name\x18\x05 \x01(\t\x12\x0c\n\x04tags\x18\x06 \x03(\t\"h\n\x11\x43reateDc2Response\x12(\n\x05\x65rror\x18\x01 \x01(\x0b\x32\x19.didi.cloud.base.v1.Error\x12)\n\x04\x64\x61ta\x18\x02 \x03(\x0b\x32\x1b.didi.cloud.base.v1.JobInfo\">\n\x10ListImageRequest\x12*\n\x06header\x18\x01 \x01(\x0b\x32\x1a.didi.cloud.base.v1.Header\"\x98\x03\n\x11ListImageResponse\x12(\n\x05\x65rror\x18\x01 \x01(\x0b\x32\x19.didi.cloud.base.v1.Error\x12<\n\x04\x64\x61ta\x18\x03 \x03(\x0b\x32..didi.cloud.compute.v1.ListImageResponse.Image\x1a\x9a\x02\n\x05Image\x12\x0f\n\x07imgUuid\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x10\n\x08osFamily\x18\x03 \x01(\t\x12\x11\n\tosVersion\x18\x04 \x01(\t\x12\x10\n\x08platform\x18\x05 \x01(\t\x12\x0c\n\x04type\x18\x06 \x01(\t\x12\x0e\n\x06scenes\x18\x07 \x03(\t\x12O\n\x0brequirement\x18\x08 \x01(\x0b\x32:.didi.cloud.compute.v1.ListImageResponse.Image.Requirement\x1aL\n\x0bRequirement\x12\x11\n\tminCpuNum\x18\x01 \x01(\x05\x12\x13\n\x0bminDiskSize\x18\x02 \x01(\x03\x12\x15\n\rminMemorySize\x18\x03 \x01(\x03\"`\n\x06SshKey\x12\x12\n\npubKeyUuid\x18\x02 \x01(\t\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x0b\n\x03key\x18\x04 \x01(\t\x12\x13\n\x0b\x66ingerprint\x18\x05 \x01(\t\x12\x12\n\ncreateTime\x18\x06 \x01(\x03\"?\n\x11ListSshKeyRequest\x12*\n\x06header\x18\x01 \x01(\x0b\x32\x1a.didi.cloud.base.v1.Header\"k\n\x12ListSshKeyResponse\x12(\n\x05\x65rror\x18\x01 \x01(\x0b\x32\x19.didi.cloud.base.v1.Error\x12+\n\x04\x64\x61ta\x18\x02 \x03(\x0b\x32\x1d.didi.cloud.compute.v1.SshKey\"\\\n\x13\x43reateSshKeyRequest\x12*\n\x06header\x18\x01 \x01(\x0b\x32\x1a.didi.cloud.base.v1.Header\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0b\n\x03key\x18\x03 \x01(\t\"m\n\x14\x43reateSshKeyResponse\x12(\n\x05\x65rror\x18\x01 \x01(\x0b\x32\x19.didi.cloud.base.v1.Error\x12+\n\x04\x64\x61ta\x18\x02 \x03(\x0b\x32\x1d.didi.cloud.compute.v1.SshKey\"U\n\x13\x44\x65leteSshKeyRequest\x12*\n\x06header\x18\x01 \x01(\x0b\x32\x1a.didi.cloud.base.v1.Header\x12\x12\n\npubKeyUuid\x18\x02 \x01(\t\"@\n\x14\x44\x65leteSshKeyResponse\x12(\n\x05\x65rror\x18\x01 \x01(\x0b\x32\x19.didi.cloud.base.v1.Error2\x91\r\n\x03\x44\x63\x32\x12Z\n\x07ListDc2\x12%.didi.cloud.compute.v1.ListDc2Request\x1a&.didi.cloud.compute.v1.ListDc2Response\"\x00\x12o\n\x0eGetDc2TotalCnt\x12,.didi.cloud.compute.v1.GetDc2TotalCntRequest\x1a-.didi.cloud.compute.v1.GetDc2TotalCntResponse\"\x00\x12i\n\x0cGetDc2ByUuid\x12*.didi.cloud.compute.v1.GetDc2ByUuidRequest\x1a+.didi.cloud.compute.v1.GetDc2ByUuidResponse\"\x00\x12]\n\x08StartDc2\x12&.didi.cloud.compute.v1.StartDc2Request\x1a\'.didi.cloud.compute.v1.StartDc2Response\"\x00\x12Z\n\x07StopDc2\x12%.didi.cloud.compute.v1.StopDc2Request\x1a&.didi.cloud.compute.v1.StopDc2Response\"\x00\x12`\n\tRebootDc2\x12\'.didi.cloud.compute.v1.RebootDc2Request\x1a(.didi.cloud.compute.v1.RebootDc2Response\"\x00\x12\x63\n\nDestroyDc2\x12(.didi.cloud.compute.v1.DestroyDc2Request\x1a).didi.cloud.compute.v1.DestroyDc2Response\"\x00\x12l\n\rChangeDc2Name\x12+.didi.cloud.compute.v1.ChangeDc2NameRequest\x1a,.didi.cloud.compute.v1.ChangeDc2NameResponse\"\x00\x12x\n\x11\x43hangeDc2Password\x12/.didi.cloud.compute.v1.ChangeDc2PasswordRequest\x1a\x30.didi.cloud.compute.v1.ChangeDc2PasswordResponse\"\x00\x12{\n\x12ReinstallDc2System\x12\x30.didi.cloud.compute.v1.ReinstallDc2SystemRequest\x1a\x31.didi.cloud.compute.v1.ReinstallDc2SystemResponse\"\x00\x12`\n\tCreateDc2\x12\'.didi.cloud.compute.v1.CreateDc2Request\x1a(.didi.cloud.compute.v1.CreateDc2Response\"\x00\x12l\n\rChangeDc2Spec\x12+.didi.cloud.compute.v1.ChangeDc2SpecRequest\x1a,.didi.cloud.compute.v1.ChangeDc2SpecResponse\"\x00\x12`\n\tListImage\x12\'.didi.cloud.compute.v1.ListImageRequest\x1a(.didi.cloud.compute.v1.ListImageResponse\"\x00\x12\x63\n\nListSshKey\x12(.didi.cloud.compute.v1.ListSshKeyRequest\x1a).didi.cloud.compute.v1.ListSshKeyResponse\"\x00\x12i\n\x0c\x43reateSshKey\x12*.didi.cloud.compute.v1.CreateSshKeyRequest\x1a+.didi.cloud.compute.v1.CreateSshKeyResponse\"\x00\x12i\n\x0c\x44\x65leteSshKey\x12*.didi.cloud.compute.v1.DeleteSshKeyRequest\x1a+.didi.cloud.compute.v1.DeleteSshKeyResponse\"\x00\x42\x87\x01\n\x16\x63om.didiyun.compute.v1P\x01Z4github.com/didiyun/didiyun-go-sdk/compute/v1;compute\xf8\x01\x01\xaa\x02\x17\x44idi.Dicloud.Compute.V1\xca\x02\x17\x44idi\\Dicloud\\Compute\\V1b\x06proto3')
+  serialized_pb=_b('\n\x14\x63ompute/v1/dc2.proto\x12\x15\x64idi.cloud.compute.v1\x1a\x12\x62\x61se/v1/base.proto\x1a\x17\x63ompute/v1/common.proto\"i\n\x0fListDc2Response\x12(\n\x05\x65rror\x18\x01 \x01(\x0b\x32\x19.didi.cloud.base.v1.Error\x12,\n\x04\x64\x61ta\x18\x02 \x03(\x0b\x32\x1e.didi.cloud.compute.v1.Dc2Info\"\x94\x01\n\x10ListDc2Condition\x12\n\n\x02ip\x18\x01 \x01(\t\x12\x0b\n\x03\x65ip\x18\x02 \x01(\t\x12\x0f\n\x07\x64\x63\x32name\x18\x03 \x01(\t\x12\x10\n\x08vpcUuids\x18\x04 \x03(\t\x12\x0f\n\x07vpcUuid\x18\x05 \x01(\t\x12\x0e\n\x06sgUuid\x18\x06 \x01(\t\x12\x11\n\tsgExclude\x18\x07 \x01(\x08\x12\x10\n\x08\x64\x63\x32Uuids\x18\x08 \x03(\t\"\xa8\x01\n\x0eListDc2Request\x12*\n\x06header\x18\x01 \x01(\x0b\x32\x1a.didi.cloud.base.v1.Header\x12\r\n\x05start\x18\x02 \x01(\x05\x12\r\n\x05limit\x18\x03 \x01(\x05\x12\x10\n\x08simplify\x18\x04 \x01(\x08\x12:\n\tcondition\x18\x05 \x01(\x0b\x32\'.didi.cloud.compute.v1.ListDc2Condition\"\xc5\x01\n\x15GetDc2TotalCntRequest\x12*\n\x06header\x18\x01 \x01(\x0b\x32\x1a.didi.cloud.base.v1.Header\x12\n\n\x02ip\x18\x02 \x01(\t\x12\x0b\n\x03\x65ip\x18\x03 \x01(\t\x12\x0f\n\x07\x64\x63\x32name\x18\x04 \x01(\t\x12\x10\n\x08vpcUuids\x18\x05 \x03(\t\x12\x0f\n\x07vpcUuid\x18\x06 \x01(\t\x12\x0e\n\x06sgUuid\x18\x07 \x01(\t\x12\x11\n\tsgExclude\x18\x08 \x01(\x08\x12\x10\n\x08\x64\x63\x32Uuids\x18\t \x03(\t\"u\n\x16GetDc2TotalCntResponse\x12(\n\x05\x65rror\x18\x01 \x01(\x0b\x32\x19.didi.cloud.base.v1.Error\x12\x31\n\x04\x64\x61ta\x18\x02 \x03(\x0b\x32#.didi.cloud.compute.v1.TotalCntInfo\"R\n\x13GetDc2ByUuidRequest\x12*\n\x06header\x18\x01 \x01(\x0b\x32\x1a.didi.cloud.base.v1.Header\x12\x0f\n\x07\x64\x63\x32Uuid\x18\x02 \x01(\t\"n\n\x14GetDc2ByUuidResponse\x12(\n\x05\x65rror\x18\x01 \x01(\x0b\x32\x19.didi.cloud.base.v1.Error\x12,\n\x04\x64\x61ta\x18\x02 \x03(\x0b\x32\x1e.didi.cloud.compute.v1.Dc2Info\"\xc0\x01\n\x14\x43hangeDc2SpecRequest\x12*\n\x06header\x18\x01 \x01(\x0b\x32\x1a.didi.cloud.base.v1.Header\x12\x10\n\x08\x63ouponId\x18\x02 \x01(\t\x12>\n\x03\x64\x63\x32\x18\x03 \x03(\x0b\x32\x31.didi.cloud.compute.v1.ChangeDc2SpecRequest.Input\x1a*\n\x05Input\x12\x0f\n\x07\x64\x63\x32Uuid\x18\x01 \x01(\t\x12\x10\n\x08\x64\x63\x32Model\x18\x02 \x01(\t\"l\n\x15\x43hangeDc2SpecResponse\x12(\n\x05\x65rror\x18\x01 \x01(\x0b\x32\x19.didi.cloud.base.v1.Error\x12)\n\x04\x64\x61ta\x18\x02 \x03(\x0b\x32\x1b.didi.cloud.base.v1.JobInfo\"\xa0\x02\n\x19ReinstallDc2SystemRequest\x12*\n\x06header\x18\x01 \x01(\x0b\x32\x1a.didi.cloud.base.v1.Header\x12\x43\n\x03\x64\x63\x32\x18\x02 \x03(\x0b\x32\x36.didi.cloud.compute.v1.ReinstallDc2SystemRequest.Input\x1a\x91\x01\n\x05Input\x12\x0f\n\x07\x64\x63\x32Uuid\x18\x01 \x01(\t\x12\x0f\n\x07imgUuid\x18\x02 \x01(\t\x12\x13\n\x0bpubKeyUuids\x18\x03 \x03(\t\x12\x10\n\x08password\x18\x04 \x01(\t\x12\x1f\n\x17proSecurityAgentEnabled\x18\x05 \x01(\x08\x12\x1e\n\x16monitoringAgentEnabled\x18\x06 \x01(\x08\"q\n\x1aReinstallDc2SystemResponse\x12(\n\x05\x65rror\x18\x01 \x01(\x0b\x32\x19.didi.cloud.base.v1.Error\x12)\n\x04\x64\x61ta\x18\x02 \x03(\x0b\x32\x1b.didi.cloud.base.v1.JobInfo\"\xcf\x01\n\x11\x44\x65stroyDc2Request\x12*\n\x06header\x18\x01 \x01(\x0b\x32\x1a.didi.cloud.base.v1.Header\x12;\n\x03\x64\x63\x32\x18\x02 \x03(\x0b\x32..didi.cloud.compute.v1.DestroyDc2Request.Input\x12\x11\n\tdeleteEip\x18\x03 \x01(\x08\x12\x11\n\tdeleteEbs\x18\x04 \x01(\x08\x12\x11\n\tignoreSlb\x18\x05 \x01(\x08\x1a\x18\n\x05Input\x12\x0f\n\x07\x64\x63\x32Uuid\x18\x01 \x01(\t\"i\n\x12\x44\x65stroyDc2Response\x12(\n\x05\x65rror\x18\x01 \x01(\x0b\x32\x19.didi.cloud.base.v1.Error\x12)\n\x04\x64\x61ta\x18\x02 \x03(\x0b\x32\x1b.didi.cloud.base.v1.JobInfo\"\x92\x01\n\x0fStartDc2Request\x12*\n\x06header\x18\x01 \x01(\x0b\x32\x1a.didi.cloud.base.v1.Header\x12\x39\n\x03\x64\x63\x32\x18\x02 \x03(\x0b\x32,.didi.cloud.compute.v1.StartDc2Request.Input\x1a\x18\n\x05Input\x12\x0f\n\x07\x64\x63\x32Uuid\x18\x01 \x01(\t\"g\n\x10StartDc2Response\x12(\n\x05\x65rror\x18\x01 \x01(\x0b\x32\x19.didi.cloud.base.v1.Error\x12)\n\x04\x64\x61ta\x18\x02 \x03(\x0b\x32\x1b.didi.cloud.base.v1.JobInfo\"\x90\x01\n\x0eStopDc2Request\x12*\n\x06header\x18\x01 \x01(\x0b\x32\x1a.didi.cloud.base.v1.Header\x12\x38\n\x03\x64\x63\x32\x18\x02 \x03(\x0b\x32+.didi.cloud.compute.v1.StopDc2Request.Input\x1a\x18\n\x05Input\x12\x0f\n\x07\x64\x63\x32Uuid\x18\x01 \x01(\t\"f\n\x0fStopDc2Response\x12(\n\x05\x65rror\x18\x01 \x01(\x0b\x32\x19.didi.cloud.base.v1.Error\x12)\n\x04\x64\x61ta\x18\x02 \x03(\x0b\x32\x1b.didi.cloud.base.v1.JobInfo\"\x94\x01\n\x10RebootDc2Request\x12*\n\x06header\x18\x01 \x01(\x0b\x32\x1a.didi.cloud.base.v1.Header\x12:\n\x03\x64\x63\x32\x18\x02 \x03(\x0b\x32-.didi.cloud.compute.v1.RebootDc2Request.Input\x1a\x18\n\x05Input\x12\x0f\n\x07\x64\x63\x32Uuid\x18\x01 \x01(\t\"h\n\x11RebootDc2Response\x12(\n\x05\x65rror\x18\x01 \x01(\x0b\x32\x19.didi.cloud.base.v1.Error\x12)\n\x04\x64\x61ta\x18\x02 \x03(\x0b\x32\x1b.didi.cloud.base.v1.JobInfo\"\xaa\x01\n\x14\x43hangeDc2NameRequest\x12*\n\x06header\x18\x01 \x01(\x0b\x32\x1a.didi.cloud.base.v1.Header\x12>\n\x03\x64\x63\x32\x18\x02 \x03(\x0b\x32\x31.didi.cloud.compute.v1.ChangeDc2NameRequest.Input\x1a&\n\x05Input\x12\x0f\n\x07\x64\x63\x32Uuid\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\"l\n\x15\x43hangeDc2NameResponse\x12(\n\x05\x65rror\x18\x01 \x01(\x0b\x32\x19.didi.cloud.base.v1.Error\x12)\n\x04\x64\x61ta\x18\x02 \x03(\x0b\x32\x1b.didi.cloud.base.v1.JobInfo\"\xb6\x01\n\x18\x43hangeDc2PasswordRequest\x12*\n\x06header\x18\x01 \x01(\x0b\x32\x1a.didi.cloud.base.v1.Header\x12\x42\n\x03\x64\x63\x32\x18\x02 \x03(\x0b\x32\x35.didi.cloud.compute.v1.ChangeDc2PasswordRequest.Input\x1a*\n\x05Input\x12\x0f\n\x07\x64\x63\x32Uuid\x18\x01 \x01(\t\x12\x10\n\x08password\x18\x02 \x01(\t\"p\n\x19\x43hangeDc2PasswordResponse\x12(\n\x05\x65rror\x18\x01 \x01(\x0b\x32\x19.didi.cloud.base.v1.Error\x12)\n\x04\x64\x61ta\x18\x02 \x03(\x0b\x32\x1b.didi.cloud.base.v1.JobInfo\"\xbc\x05\n\x10\x43reateDc2Request\x12*\n\x06header\x18\x01 \x01(\x0b\x32\x1a.didi.cloud.base.v1.Header\x12\r\n\x05\x63ount\x18\x02 \x01(\x05\x12\x14\n\x0c\x61utoContinue\x18\x03 \x01(\x08\x12\x11\n\tpayPeriod\x18\x04 \x01(\x05\x12\x10\n\x08\x63ouponId\x18\x05 \x01(\t\x12\x0f\n\x07imgUuid\x18\x06 \x01(\t\x12\x10\n\x08snapUuid\x18\x07 \x01(\t\x12\x12\n\nsubnetUuid\x18\x08 \x01(\t\x12\x10\n\x08\x64\x63\x32Model\x18\t \x01(\t\x12\x13\n\x0bpubKeyUuids\x18\n \x03(\t\x12\x10\n\x08password\x18\x0b \x01(\t\x12\x14\n\x0crootDiskSize\x18\x0c \x01(\x05\x12\x14\n\x0crootDiskType\x18\r \x01(\t\x12\x0f\n\x07sgUuids\x18\x0e \x03(\t\x12\x0c\n\x04tags\x18\x0f \x03(\t\x12\x0c\n\x04name\x18\x10 \x01(\t\x12\x1f\n\x17proSecurityAgentEnabled\x18\x11 \x01(\x08\x12\x1e\n\x16monitoringAgentEnabled\x18\x12 \x01(\x08\x12\x38\n\x03\x65ip\x18\x13 \x01(\x0b\x32+.didi.cloud.compute.v1.CreateDc2Request.Eip\x12\x38\n\x03\x65\x62s\x18\x14 \x03(\x0b\x32+.didi.cloud.compute.v1.CreateDc2Request.Ebs\x12\x10\n\x08userData\x18\x15 \x01(\t\x1a>\n\x03\x45ip\x12\x11\n\tbandwidth\x18\x01 \x01(\x05\x12\x0c\n\x04tags\x18\x02 \x03(\t\x12\x16\n\x0e\x63hargeWithFlow\x18\x03 \x01(\x08\x1a\x62\n\x03\x45\x62s\x12\r\n\x05\x63ount\x18\x01 \x01(\x05\x12\x10\n\x08snapUuid\x18\x02 \x01(\t\x12\x10\n\x08\x64iskType\x18\x03 \x01(\t\x12\x0c\n\x04size\x18\x04 \x01(\x05\x12\x0c\n\x04name\x18\x05 \x01(\t\x12\x0c\n\x04tags\x18\x06 \x03(\t\"h\n\x11\x43reateDc2Response\x12(\n\x05\x65rror\x18\x01 \x01(\x0b\x32\x19.didi.cloud.base.v1.Error\x12)\n\x04\x64\x61ta\x18\x02 \x03(\x0b\x32\x1b.didi.cloud.base.v1.JobInfo\">\n\x10ListImageRequest\x12*\n\x06header\x18\x01 \x01(\x0b\x32\x1a.didi.cloud.base.v1.Header\"\x98\x03\n\x11ListImageResponse\x12(\n\x05\x65rror\x18\x01 \x01(\x0b\x32\x19.didi.cloud.base.v1.Error\x12<\n\x04\x64\x61ta\x18\x03 \x03(\x0b\x32..didi.cloud.compute.v1.ListImageResponse.Image\x1a\x9a\x02\n\x05Image\x12\x0f\n\x07imgUuid\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x10\n\x08osFamily\x18\x03 \x01(\t\x12\x11\n\tosVersion\x18\x04 \x01(\t\x12\x10\n\x08platform\x18\x05 \x01(\t\x12\x0c\n\x04type\x18\x06 \x01(\t\x12\x0e\n\x06scenes\x18\x07 \x03(\t\x12O\n\x0brequirement\x18\x08 \x01(\x0b\x32:.didi.cloud.compute.v1.ListImageResponse.Image.Requirement\x1aL\n\x0bRequirement\x12\x11\n\tminCpuNum\x18\x01 \x01(\x05\x12\x13\n\x0bminDiskSize\x18\x02 \x01(\x03\x12\x15\n\rminMemorySize\x18\x03 \x01(\x03\"`\n\x06SshKey\x12\x12\n\npubKeyUuid\x18\x02 \x01(\t\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x0b\n\x03key\x18\x04 \x01(\t\x12\x13\n\x0b\x66ingerprint\x18\x05 \x01(\t\x12\x12\n\ncreateTime\x18\x06 \x01(\x03\"?\n\x11ListSshKeyRequest\x12*\n\x06header\x18\x01 \x01(\x0b\x32\x1a.didi.cloud.base.v1.Header\"k\n\x12ListSshKeyResponse\x12(\n\x05\x65rror\x18\x01 \x01(\x0b\x32\x19.didi.cloud.base.v1.Error\x12+\n\x04\x64\x61ta\x18\x02 \x03(\x0b\x32\x1d.didi.cloud.compute.v1.SshKey\"\\\n\x13\x43reateSshKeyRequest\x12*\n\x06header\x18\x01 \x01(\x0b\x32\x1a.didi.cloud.base.v1.Header\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0b\n\x03key\x18\x03 \x01(\t\"m\n\x14\x43reateSshKeyResponse\x12(\n\x05\x65rror\x18\x01 \x01(\x0b\x32\x19.didi.cloud.base.v1.Error\x12+\n\x04\x64\x61ta\x18\x02 \x03(\x0b\x32\x1d.didi.cloud.compute.v1.SshKey\"U\n\x13\x44\x65leteSshKeyRequest\x12*\n\x06header\x18\x01 \x01(\x0b\x32\x1a.didi.cloud.base.v1.Header\x12\x12\n\npubKeyUuid\x18\x02 \x01(\t\"@\n\x14\x44\x65leteSshKeyResponse\x12(\n\x05\x65rror\x18\x01 \x01(\x0b\x32\x19.didi.cloud.base.v1.Error2\x91\r\n\x03\x44\x63\x32\x12Z\n\x07ListDc2\x12%.didi.cloud.compute.v1.ListDc2Request\x1a&.didi.cloud.compute.v1.ListDc2Response\"\x00\x12o\n\x0eGetDc2TotalCnt\x12,.didi.cloud.compute.v1.GetDc2TotalCntRequest\x1a-.didi.cloud.compute.v1.GetDc2TotalCntResponse\"\x00\x12i\n\x0cGetDc2ByUuid\x12*.didi.cloud.compute.v1.GetDc2ByUuidRequest\x1a+.didi.cloud.compute.v1.GetDc2ByUuidResponse\"\x00\x12]\n\x08StartDc2\x12&.didi.cloud.compute.v1.StartDc2Request\x1a\'.didi.cloud.compute.v1.StartDc2Response\"\x00\x12Z\n\x07StopDc2\x12%.didi.cloud.compute.v1.StopDc2Request\x1a&.didi.cloud.compute.v1.StopDc2Response\"\x00\x12`\n\tRebootDc2\x12\'.didi.cloud.compute.v1.RebootDc2Request\x1a(.didi.cloud.compute.v1.RebootDc2Response\"\x00\x12\x63\n\nDestroyDc2\x12(.didi.cloud.compute.v1.DestroyDc2Request\x1a).didi.cloud.compute.v1.DestroyDc2Response\"\x00\x12l\n\rChangeDc2Name\x12+.didi.cloud.compute.v1.ChangeDc2NameRequest\x1a,.didi.cloud.compute.v1.ChangeDc2NameResponse\"\x00\x12x\n\x11\x43hangeDc2Password\x12/.didi.cloud.compute.v1.ChangeDc2PasswordRequest\x1a\x30.didi.cloud.compute.v1.ChangeDc2PasswordResponse\"\x00\x12{\n\x12ReinstallDc2System\x12\x30.didi.cloud.compute.v1.ReinstallDc2SystemRequest\x1a\x31.didi.cloud.compute.v1.ReinstallDc2SystemResponse\"\x00\x12`\n\tCreateDc2\x12\'.didi.cloud.compute.v1.CreateDc2Request\x1a(.didi.cloud.compute.v1.CreateDc2Response\"\x00\x12l\n\rChangeDc2Spec\x12+.didi.cloud.compute.v1.ChangeDc2SpecRequest\x1a,.didi.cloud.compute.v1.ChangeDc2SpecResponse\"\x00\x12`\n\tListImage\x12\'.didi.cloud.compute.v1.ListImageRequest\x1a(.didi.cloud.compute.v1.ListImageResponse\"\x00\x12\x63\n\nListSshKey\x12(.didi.cloud.compute.v1.ListSshKeyRequest\x1a).didi.cloud.compute.v1.ListSshKeyResponse\"\x00\x12i\n\x0c\x43reateSshKey\x12*.didi.cloud.compute.v1.CreateSshKeyRequest\x1a+.didi.cloud.compute.v1.CreateSshKeyResponse\"\x00\x12i\n\x0c\x44\x65leteSshKey\x12*.didi.cloud.compute.v1.DeleteSshKeyRequest\x1a+.didi.cloud.compute.v1.DeleteSshKeyResponse\"\x00\x42\x87\x01\n\x16\x63om.didiyun.compute.v1P\x01Z4github.com/didiyun/didiyun-go-sdk/compute/v1;compute\xf8\x01\x01\xaa\x02\x17\x44idi.Dicloud.Compute.V1\xca\x02\x17\x44idi\\Dicloud\\Compute\\V1b\x06proto3')
   ,
   dependencies=[base_dot_v1_dot_base__pb2.DESCRIPTOR,compute_dot_v1_dot_common__pb2.DESCRIPTOR,])
 
@@ -1379,8 +1379,8 @@ _CREATEDC2REQUEST_EIP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3929,
-  serialized_end=3991,
+  serialized_start=3947,
+  serialized_end=4009,
 )
 
 _CREATEDC2REQUEST_EBS = _descriptor.Descriptor(
@@ -1444,8 +1444,8 @@ _CREATEDC2REQUEST_EBS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3993,
-  serialized_end=4091,
+  serialized_start=4011,
+  serialized_end=4109,
 )
 
 _CREATEDC2REQUEST = _descriptor.Descriptor(
@@ -1595,6 +1595,13 @@ _CREATEDC2REQUEST = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='userData', full_name='didi.cloud.compute.v1.CreateDc2Request.userData', index=20,
+      number=21, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -1608,7 +1615,7 @@ _CREATEDC2REQUEST = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=3409,
-  serialized_end=4091,
+  serialized_end=4109,
 )
 
 
@@ -1645,8 +1652,8 @@ _CREATEDC2RESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4093,
-  serialized_end=4197,
+  serialized_start=4111,
+  serialized_end=4215,
 )
 
 
@@ -1676,8 +1683,8 @@ _LISTIMAGEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4199,
-  serialized_end=4261,
+  serialized_start=4217,
+  serialized_end=4279,
 )
 
 
@@ -1721,8 +1728,8 @@ _LISTIMAGERESPONSE_IMAGE_REQUIREMENT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4596,
-  serialized_end=4672,
+  serialized_start=4614,
+  serialized_end=4690,
 )
 
 _LISTIMAGERESPONSE_IMAGE = _descriptor.Descriptor(
@@ -1800,8 +1807,8 @@ _LISTIMAGERESPONSE_IMAGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4390,
-  serialized_end=4672,
+  serialized_start=4408,
+  serialized_end=4690,
 )
 
 _LISTIMAGERESPONSE = _descriptor.Descriptor(
@@ -1837,8 +1844,8 @@ _LISTIMAGERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4264,
-  serialized_end=4672,
+  serialized_start=4282,
+  serialized_end=4690,
 )
 
 
@@ -1896,8 +1903,8 @@ _SSHKEY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4674,
-  serialized_end=4770,
+  serialized_start=4692,
+  serialized_end=4788,
 )
 
 
@@ -1927,8 +1934,8 @@ _LISTSSHKEYREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4772,
-  serialized_end=4835,
+  serialized_start=4790,
+  serialized_end=4853,
 )
 
 
@@ -1965,8 +1972,8 @@ _LISTSSHKEYRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4837,
-  serialized_end=4944,
+  serialized_start=4855,
+  serialized_end=4962,
 )
 
 
@@ -2010,8 +2017,8 @@ _CREATESSHKEYREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4946,
-  serialized_end=5038,
+  serialized_start=4964,
+  serialized_end=5056,
 )
 
 
@@ -2048,8 +2055,8 @@ _CREATESSHKEYRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5040,
-  serialized_end=5149,
+  serialized_start=5058,
+  serialized_end=5167,
 )
 
 
@@ -2086,8 +2093,8 @@ _DELETESSHKEYREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5151,
-  serialized_end=5236,
+  serialized_start=5169,
+  serialized_end=5254,
 )
 
 
@@ -2117,8 +2124,8 @@ _DELETESSHKEYRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5238,
-  serialized_end=5302,
+  serialized_start=5256,
+  serialized_end=5320,
 )
 
 _LISTDC2RESPONSE.fields_by_name['error'].message_type = base_dot_v1_dot_base__pb2._ERROR
@@ -2571,8 +2578,8 @@ _DC2 = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=5305,
-  serialized_end=6986,
+  serialized_start=5323,
+  serialized_end=7004,
   methods=[
   _descriptor.MethodDescriptor(
     name='ListDc2',
